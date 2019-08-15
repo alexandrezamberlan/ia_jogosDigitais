@@ -1,0 +1,49 @@
+SISTEMAS DE COMPORTAMENTO INTELIGENTE
+
+    BASE DE CONHECIMENTO - adquirida com tempo/experiência
+    MOTOR DE RACIOCÍNIO/INFERÊNCIA
+        dedutivo - do genérico ao específico
+        indutivo - do específico ao genérico
+    APRENDIZAGEM ou RECONHECIMENTO DE PADRÕES
+
+Quais são os tipos de problemas para a IA ou SCI?
+
+    estados (inicial, intermediários e finais)
+    regras de transição (métodos/operações)
+    heurística (dica) - que pode ser falha ou inadimissível
+    restrições (if) - quanto mais, mais complexidade (esforço)
+    visitados/sucessores/abertos (que consome memória)
+    função objetivo/meta/fim
+
+Técnicas são de resolução de problemas
+
+      (2) Métodos de busca (de soluções)
+        FORÇA BRUTA
+            profundidade - dedução
+            amplitude/largura
+        BUSCA HEURÍSTICA 
+            subida de encosta
+            guloso
+            A*
+            Algoritmos Genéticos
+
+    (1 e 2) Representação e Inferência de conhecimento
+        PROLOG
+        ONTOLOGIA
+
+    (1, 2 e 3) Sistemas Multiagentes - resolução coletiva de problemas
+        Agentes - robótica no nível do software - COMPORTAMENTO
+
+    (1 e 2) Sistemas Especialistas - diagnóstico e exibição de como foi diagnosticado
+        árvores de decisão
+
+    (3) Redes Neurais Artificiais - reconhecimento de padrões
+        TREINAMENTO é realizado antes do sistema entrar em ação
+            atributos e seus pesos
+        MATEMÁTICA
+
+    (1, 2 e 3) MINERAÇÃO DE DADOS
+        banco de dados
+        texto
+        web
+
