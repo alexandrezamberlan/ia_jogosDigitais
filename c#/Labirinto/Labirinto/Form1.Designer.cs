@@ -32,7 +32,9 @@
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gerarLabirintoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel_matriz = new System.Windows.Forms.Panel();
+            this.button_jogador = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
+            this.panel_matriz.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -56,17 +58,29 @@
             // gerarLabirintoToolStripMenuItem
             // 
             this.gerarLabirintoToolStripMenuItem.Name = "gerarLabirintoToolStripMenuItem";
-            this.gerarLabirintoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.gerarLabirintoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.gerarLabirintoToolStripMenuItem.Text = "Gerar Labirinto";
             this.gerarLabirintoToolStripMenuItem.Click += new System.EventHandler(this.gerarLabirintoToolStripMenuItem_Click);
             // 
             // panel_matriz
             // 
+            this.panel_matriz.Controls.Add(this.button_jogador);
             this.panel_matriz.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_matriz.Location = new System.Drawing.Point(0, 24);
             this.panel_matriz.Name = "panel_matriz";
             this.panel_matriz.Size = new System.Drawing.Size(800, 426);
             this.panel_matriz.TabIndex = 1;
+            // 
+            // button_jogador
+            // 
+            this.button_jogador.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button_jogador.Location = new System.Drawing.Point(333, 304);
+            this.button_jogador.Name = "button_jogador";
+            this.button_jogador.Size = new System.Drawing.Size(15, 17);
+            this.button_jogador.TabIndex = 0;
+            this.button_jogador.UseVisualStyleBackColor = false;
+            this.button_jogador.Visible = false;
+            this.button_jogador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.button_jogador_KeyPress_1);
             // 
             // Form1
             // 
@@ -80,6 +94,7 @@
             this.Text = "Labirinto";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panel_matriz.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -91,6 +106,7 @@
         private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gerarLabirintoToolStripMenuItem;
         private System.Windows.Forms.Panel panel_matriz;
+        private System.Windows.Forms.Button button_jogador;
     }
 }
 
