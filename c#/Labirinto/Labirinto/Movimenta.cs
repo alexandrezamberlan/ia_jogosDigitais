@@ -14,7 +14,7 @@ namespace Labirinto
             if (botao.Bounds.Y > 0)
             {
                 botao.SetBounds(botao.Bounds.X,
-                            botao.Bounds.Y - 5,
+                            botao.Bounds.Y - 1,
                             botao.Bounds.Width,
                             botao.Bounds.Height);
             }
@@ -25,7 +25,7 @@ namespace Labirinto
             if (botao.Bounds.Y < altura - 90)
             {
                 botao.SetBounds(botao.Bounds.X,
-                            botao.Bounds.Y + 5,
+                            botao.Bounds.Y + 1,
                             botao.Bounds.Width,
                             botao.Bounds.Height);
             }
@@ -35,7 +35,7 @@ namespace Labirinto
         {
             if (botao.Bounds.X > 0)
             {
-                botao.SetBounds(botao.Bounds.X - 5,
+                botao.SetBounds(botao.Bounds.X - 1,
                             botao.Bounds.Y,
                             botao.Bounds.Width,
                             botao.Bounds.Height);
@@ -47,7 +47,7 @@ namespace Labirinto
         {
             if (botao.Bounds.X < largura - 40)
             {
-                botao.SetBounds(botao.Bounds.X + 5,
+                botao.SetBounds(botao.Bounds.X + 1,
                             botao.Bounds.Y,
                             botao.Bounds.Width,
                             botao.Bounds.Height);
