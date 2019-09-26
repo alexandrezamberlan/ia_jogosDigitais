@@ -28,3 +28,13 @@ C:\Users\rikef\Desktop\Labirinto\Labirinto\obj\Debug\Labirinto.csproj.GenerateRe
 C:\Users\rikef\Desktop\Labirinto\Labirinto\obj\Debug\Labirinto.csproj.CoreCompileInputs.cache
 C:\Users\rikef\Desktop\Labirinto\Labirinto\obj\Debug\Labirinto.exe
 C:\Users\rikef\Desktop\Labirinto\Labirinto\obj\Debug\Labirinto.pdb
+C:\Users\usrlab09\Downloads\ia_jogosDigitais\c#\Labirinto\Labirinto\bin\Debug\Labirinto.exe.config
+C:\Users\usrlab09\Downloads\ia_jogosDigitais\c#\Labirinto\Labirinto\bin\Debug\Labirinto.exe
+C:\Users\usrlab09\Downloads\ia_jogosDigitais\c#\Labirinto\Labirinto\bin\Debug\Labirinto.pdb
+C:\Users\usrlab09\Downloads\ia_jogosDigitais\c#\Labirinto\Labirinto\obj\Debug\Labirinto.csprojAssemblyReference.cache
+C:\Users\usrlab09\Downloads\ia_jogosDigitais\c#\Labirinto\Labirinto\obj\Debug\Labirinto.Form1.resources
+C:\Users\usrlab09\Downloads\ia_jogosDigitais\c#\Labirinto\Labirinto\obj\Debug\Labirinto.Properties.Resources.resources
+C:\Users\usrlab09\Downloads\ia_jogosDigitais\c#\Labirinto\Labirinto\obj\Debug\Labirinto.csproj.GenerateResource.cache
+C:\Users\usrlab09\Downloads\ia_jogosDigitais\c#\Labirinto\Labirinto\obj\Debug\Labirinto.csproj.CoreCompileInputs.cache
+C:\Users\usrlab09\Downloads\ia_jogosDigitais\c#\Labirinto\Labirinto\obj\Debug\Labirinto.exe
+C:\Users\usrlab09\Downloads\ia_jogosDigitais\c#\Labirinto\Labirinto\obj\Debug\Labirinto.pdb
