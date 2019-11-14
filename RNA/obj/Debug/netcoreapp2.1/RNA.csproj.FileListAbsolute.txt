@@ -1,0 +1,4 @@
+/Users/alexandrezamberlan/codigos/ia/ia_jogosDigitais/RNA/obj/Debug/netcoreapp2.1/RNA.csprojAssemblyReference.cache
+/Users/alexandrezamberlan/codigos/ia/ia_jogosDigitais/RNA/obj/Debug/netcoreapp2.1/RNA.csproj.CoreCompileInputs.cache
+/Users/alexandrezamberlan/codigos/ia/ia_jogosDigitais/RNA/obj/Debug/netcoreapp2.1/RNA.AssemblyInfoInputs.cache
+/Users/alexandrezamberlan/codigos/ia/ia_jogosDigitais/RNA/obj/Debug/netcoreapp2.1/RNA.AssemblyInfo.cs
