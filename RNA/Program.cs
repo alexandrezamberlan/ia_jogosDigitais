@@ -2,17 +2,14 @@
 
 namespace RNA
 {
+    
     class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Exemplo de uso de RNA Perceptron!");
-            Perceptron_And p = new Perceptron_And();
-            p.treinar();
- 
-            Console.WriteLine("Para aprender o algoritmo treinou " + p.conta + " geracoes! \n ");
- 
-            p.testar();
+            Perceptron p = new Perceptron(10);
+            Console.WriteLine("Teste de saída: " + p.saida);
         }
     }
 }
