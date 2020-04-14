@@ -31,7 +31,7 @@
 	violento(counterStrike).
 	
 	kids(Jogo,P) :- jogo(Jogo,_,P),
-	              not(violento(Jogo)).
+	                not(violento(Jogo)).
 	
 	produto(violao).
 	produto(guitarra).
