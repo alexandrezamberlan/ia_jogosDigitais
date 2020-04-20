@@ -5,6 +5,47 @@ using System.Linq;
 
 static class Program
 {
+    static void gerarPopulacao(List<Cromossomo> populacao, int tamanhoPopulacao, String estadoFinal) 
+    {
+        for (int i = 0; i < tamanhoPopulacao; i++)
+        {
+            populacao.Add(new Cromossomo(Util.gerarPalavras(estadoFinal.Length), estadoFinal));
+        }
+    }
+
+    static void ordenarPopulacao(List<Cromossomo> populacao) 
+    {
+        //implementação do método do pente - combsort
+        int distancia = populacao.Count;
+        bool houveTroca;
+        do {
+            distancia = (int) (distancia / 1.3);
+
+            if (distancia < 1) {
+                distancia = 1;
+            }
+            houveTroca = false;
+            for (int i = 0; i + distancia < populacao.Count; i++) {
+                if ((int) populacao[i].aptidao < (int) populacao[i + distancia].aptidao) {
+                    houveTroca = true;
+                    Cromossomo temp = populacao[i];
+                    populacao[i] = populacao[i + distancia];
+                    populacao[i + distancia] =  temp;
+                }
+            }
+        } while (distancia != 1 || houveTroca);
+    }
+
+    static void exibirPopulacao(List<Cromossomo> populacao) 
+    {
+        for (int i = 0; i < populacao.Count; i++)
+        {
+            Console.WriteLine(populacao[i].valor + " - " + populacao[i].aptidao + " - " + 
+            populacao[i].aptidaoPorcentagem);
+        }
+
+    }
+
     static void Main()
     {
         Console.WriteLine("Algoritmos Genéticos");
@@ -36,23 +77,28 @@ static class Program
 
         //gerar população inicial
         //calcular aptidao para cada estado/indivíduo/cromossomo da população
-        popular(populacao,tamanhoPopulacao,estadoFinal);
-        ordenar(populacao); //decrescente pela aptidao
+        gerarPopulacao(populacao,tamanhoPopulacao,estadoFinal);
+        ordenarPopulacao(populacao); //decrescente pela aptidao
         Console.WriteLine("Geração 0");
-        exibir(populacao);
+        exibirPopulacao(populacao);
 
-
+        /*
         for (int i = 1; i < quantidadeGeracoes; i++)
         {
-            //selecionar
+            selecionarPopulacao(populacao,novaPopulacao,taxaSelecao);
+            //estadoFinal é passado, pq são gerados novos cromossomos, logo é preciso 
+            //calcular a aptidao desses novos cromossomos
+            reproduzirPopulacao(populacao,novaPopulacao,taxaReproducao,estadoFinal);
+            //testar se vai haver mutacao
+            //mutar(novaPopulacao,taxaMutacao);
+            ordenarPopulacao(novaPopulacao); //decrescente pela aptidao
+            Console.WriteLine("Geração 0");
+            exibirPopulacao(novaPopulacao);
 
-            //reproduzir
-
-            //mutar
-            
-            ordenar(populacao); //decrescente pela aptidao
-            Console.WriteLine("Geração " + i);
-            exibir(populacao);
+            populacao.Clear();
+            populacao.Add( novaPopulacao ); //?
+            novaPopulacao.Clear();    
         }
+        */
     }
 }

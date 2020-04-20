@@ -16,7 +16,7 @@ class Cromossomo
         this.aptidaoPorcentagem = 0;
     }
 
-    public int calcularAptidao(String palavraFinal)
+    public int calcularAptidao(String palavraFinal) //isso é a heurística dinâmcia do AG
     {
         int nota = 0;
         for (int i = 0; i < palavraFinal.Count(); i++)
