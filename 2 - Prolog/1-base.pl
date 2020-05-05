@@ -20,7 +20,7 @@ status(rodrigo,3,3444).
 status(bruno,5,3423).
 status(pietro,4,233).
 
-
+	
 
 
 

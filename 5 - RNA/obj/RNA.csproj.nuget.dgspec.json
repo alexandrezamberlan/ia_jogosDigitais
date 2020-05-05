@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "/Users/alexandrezamberlan/codigos/ia_jogosDigitais/3 - AlgoritmosGeneticos/CodigoAG/codigoAG.csproj": {}
+    "/Users/alexandrezamberlan/codigos/ia_jogosDigitais/5 - RNA/RNA.csproj": {}
   },
   "projects": {
-    "/Users/alexandrezamberlan/codigos/ia_jogosDigitais/3 - AlgoritmosGeneticos/CodigoAG/codigoAG.csproj": {
+    "/Users/alexandrezamberlan/codigos/ia_jogosDigitais/5 - RNA/RNA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/alexandrezamberlan/codigos/ia_jogosDigitais/3 - AlgoritmosGeneticos/CodigoAG/codigoAG.csproj",
-        "projectName": "codigoAG",
-        "projectPath": "/Users/alexandrezamberlan/codigos/ia_jogosDigitais/3 - AlgoritmosGeneticos/CodigoAG/codigoAG.csproj",
+        "projectUniqueName": "/Users/alexandrezamberlan/codigos/ia_jogosDigitais/5 - RNA/RNA.csproj",
+        "projectName": "RNA",
+        "projectPath": "/Users/alexandrezamberlan/codigos/ia_jogosDigitais/5 - RNA/RNA.csproj",
         "packagesPath": "/Users/alexandrezamberlan/.nuget/packages/",
-        "outputPath": "/Users/alexandrezamberlan/codigos/ia_jogosDigitais/3 - AlgoritmosGeneticos/CodigoAG/obj/",
+        "outputPath": "/Users/alexandrezamberlan/codigos/ia_jogosDigitais/5 - RNA/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/Users/alexandrezamberlan/.config/NuGet/NuGet.Config"
+          "/Users/alexandrezamberlan/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.1"

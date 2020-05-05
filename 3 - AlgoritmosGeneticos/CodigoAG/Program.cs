@@ -88,7 +88,7 @@ static class Program
         } while (i < qtdSelecionados);
     }
 
-    static public void reproduzir(List<Cromossomo> populacao,
+    static void reproduzir(List<Cromossomo> populacao,
                                   List<Cromossomo> novaPopulacao,
                                   int taxaReproducao, String estadoFinal)
     {
@@ -130,13 +130,41 @@ static class Program
             novaPopulacao.Add(new Cromossomo(sFilho1, estadoFinal));
             novaPopulacao.Add(new Cromossomo(sFilho2, estadoFinal));
             i = i + 2;
-
         } while (i < qtdReproduzidos);
 
-        //podar o final que sobra da novaPopulacao
-        while (populacao.Count < novaPopulacao.Count) {
-            //podar o fim da novaPopulacao
-            novaPopulacao.RemoveAt(novaPopulacao.Count-1);
+        
+    }
+
+
+    static void mutar(List<Cromossomo> populacao, String estadoFinal)
+    {
+        Random gerador = new Random();
+
+        int qtdMutantes = gerador.Next(populacao.Count / 5); //20% NO MÁXIMO DE MUTANTES
+
+        Cromossomo mutante;
+        int posicaoMutante;
+
+        for (; qtdMutantes > 0; qtdMutantes--)
+        {
+            posicaoMutante = gerador.Next((int)populacao.Count / 2, populacao.Count);
+
+            mutante = populacao[posicaoMutante];
+
+            Console.WriteLine("vai mutar " + mutante.valor + "  " + mutante.aptidao);
+
+            //mutando
+            String valorMutado = mutante.valor;
+
+            char caracterMutante = mutante.valor[gerador.Next(mutante.valor.Length)];
+            char caracterSorteado = Util.letras[gerador.Next(Util.tamanho)];
+
+            valorMutado = valorMutado.Replace(caracterMutante, caracterSorteado);
+
+            mutante = new Cromossomo(valorMutado, estadoFinal);
+            Console.WriteLine("por esse " + mutante.valor + "  " + mutante.aptidao);
+
+            populacao[posicaoMutante] = mutante;
         }
     }
 
@@ -146,24 +174,28 @@ static class Program
         List<Cromossomo> populacao = new List<Cromossomo>();
         List<Cromossomo> novaPopulacao = new List<Cromossomo>();
 
-        String estadoFinal;
-        int quantidadeGeracoes;
+        String estadoFinal; 
+        int quantidadeGeracoes; 
         int taxaSelecao;
         int taxaReproducao;
         int taxaMutacao;
         int tamanhoPopulacao;
 
-        Console.Write("Qual a palavra ou frase que quer testar como estado final? ");
-        estadoFinal = Console.ReadLine();
+        //Console.Write("Qual a palavra ou frase que quer testar como estado final? ");
+        //estadoFinal = Console.ReadLine();
+        estadoFinal = "inteligencia";
 
         Console.Write("Quantas gerações pretende executar? "); //serve para o for
         quantidadeGeracoes = Int32.Parse( Console.ReadLine() );
 
-        do {
-            Console.Write("Taxa de seleção (10-90): ");
-            taxaSelecao = Int32.Parse( Console.ReadLine() );
-            taxaReproducao = 100 - taxaSelecao;
-        } while (taxaSelecao <= 10 || taxaSelecao > 90);
+        //do {
+        //    Console.Write("Taxa de seleção (10-90): ");
+        //    taxaSelecao = Int32.Parse( Console.ReadLine() );
+        //    taxaReproducao = 100 - taxaSelecao;
+        //} while (taxaSelecao <= 10 || taxaSelecao > 90);
+
+        taxaSelecao = 70;
+        taxaReproducao = 100 - taxaSelecao;
 
         do {
             Console.Write("Taxa de mutação (1-5%): ");
@@ -173,7 +205,7 @@ static class Program
         Console.Write("Tamanho da população: ");
         tamanhoPopulacao = Int32.Parse( Console.ReadLine() );
 
-        //gerar população inicial
+        //gerar população inicial que é 100% ALEATÓRIA
         //calcular aptidao para cada estado/indivíduo/cromossomo da população
         gerar(populacao,tamanhoPopulacao,estadoFinal);
         ordenar(populacao); //decrescente pela aptidao
@@ -188,9 +220,14 @@ static class Program
             //calcular a aptidao desses novos cromossomos
             
             reproduzir(populacao,novaPopulacao,taxaReproducao,estadoFinal);
+
             //testar se vai haver mutacao
-            //mutar(novaPopulacao,taxaMutacao);
-            
+            if (i % (quantidadeGeracoes / taxaMutacao) == 0)
+            {
+                Console.WriteLine("Geração que vai ter mutação....");
+                //Console.ReadKey();
+                mutar(novaPopulacao, estadoFinal); //estadoFinal é passado, pq indivíduos mutados devem ter suas aptidões recalculadas
+            }
             ordenar(novaPopulacao); //decrescente pela aptidao
             Console.WriteLine("Geração " + (i+1));
             exibir(novaPopulacao);

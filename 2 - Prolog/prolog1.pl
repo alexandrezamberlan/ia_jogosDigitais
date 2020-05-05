@@ -27,11 +27,10 @@
 	jogo(minecraft,aventura,pc).
 	jogo(mario,plataforma,console).
 	
-	
 	violento(counterStrike).
 	
-	kids(Jogo,P) :- jogo(Jogo,_,P),
-	                not(violento(Jogo)).
+	kids(Jogo,Platforma) :- jogo(Jogo,_,Plataforma),
+	                        not(violento(Jogo)).
 	
 	produto(violao).
 	produto(guitarra).

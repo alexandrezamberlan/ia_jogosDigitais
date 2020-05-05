@@ -7,7 +7,7 @@ class Cromossomo
 {
     public String valor;
     public int aptidao;
-    public int aptidaoPorcentagem;
+    public int aptidaoPorcentagem; //usado no método de seleção por roleta
 
     public Cromossomo(String valor, String palavraFinal)
     {
@@ -16,6 +16,7 @@ class Cromossomo
         this.aptidaoPorcentagem = 0; //usado na seleção, no método da roleta
     }
 
+    //método heurístico que calcula quao perto o cromossomo está da palavra final
     public int calcularAptidao(String palavraFinal) //isso é a heurística dinâmcia do AG
     {
         int nota = 0;
