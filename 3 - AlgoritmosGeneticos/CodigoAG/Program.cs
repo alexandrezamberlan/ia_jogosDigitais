@@ -140,7 +140,7 @@ static class Program
     {
         Random gerador = new Random();
 
-        int qtdMutantes = gerador.Next(populacao.Count / 5); //20% NO MÁXIMO DE MUTANTES
+        int qtdMutantes = gerador.Next(populacao.Count); //20% NO MÁXIMO DE MUTANTES
 
         Cromossomo mutante;
         int posicaoMutante;
