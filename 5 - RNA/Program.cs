@@ -16,7 +16,7 @@ namespace RNA
         }
 
         static int ativacaoStep(double soma) {
-            if (soma >= 6) return 1;
+            if (soma >= 0) return 1;
             return 0;
         }
 
@@ -26,13 +26,15 @@ namespace RNA
             // Perceptron p = new Perceptron(10);
             // Console.WriteLine("Teste de saída: " + p.saida);
 
+            /*
             List<Int32> entradas = new List<Int32>();
             List<Double> pesos = new List<Double>();
-
+            //5 3 10
             entradas.Add(5);
             entradas.Add(3);
             entradas.Add(10);
 
+            //0.3 0.6 0.1
             pesos.Add(0.3);
             pesos.Add(0.6);
             pesos.Add(0.1);
@@ -41,7 +43,15 @@ namespace RNA
             Console.WriteLine(soma);
 
             int ativar = ativacaoStep(soma);
-            Console.WriteLine(ativar);
+            Console.WriteLine(ativar);*/
+
+            Perceptron_AND perceptron = new Perceptron_AND();
+
+            perceptron.treinar();
+
+            Console.WriteLine("Para aprender o algoritmo treinou " + perceptron.contaGeracoes + " geracoes! \n ");
+
+            perceptron.testar();
 
         }
     }

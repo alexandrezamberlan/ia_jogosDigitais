@@ -1,5 +1,0 @@
-namespace RNA {
-    class Perceptron {
-        
-    }
-}

@@ -1,5 +1,8 @@
 
-REDES NEURAIS ARTIFICIAIS => Aprendizado de máquina => RECONHECIMENTO DE PADRÕES
+REDES NEURAIS ARTIFICIAIS => Aprendizado (treinamento) de máquina => RECONHECIMENTO DE PADRÕES
+
+        reconhecer só ocorre depois de treinarmos
+
         -> vários algoritmos (tipo de treinamento, topologia (quantas camadas),
                               tipo propagação (feedforward ou feedback propagations))
 
@@ -22,8 +25,8 @@ REDES NEURAIS ARTIFICIAIS => Aprendizado de máquina => RECONHECIMENTO DE PADRÕ
             - leitura
     
         Itens a observar/escutar/experimentar/ler
-            - atributos massivos
-            - pesos respectivos ()
+            - atributos/características massivos
+            - pesos respectivos (que são a importância de cada atributo)
 
         trabalha/exercita atributos e seus pesos => TREINAMENTO => APRENDIZADO DA MÁQUINA
 
@@ -40,7 +43,7 @@ REDES NEURAIS ARTIFICIAIS => Aprendizado de máquina => RECONHECIMENTO DE PADRÕ
             - separar atributos (conjunto) em categorias, ou seja, em diferentes neurônios
             - definir as funções objetivos (limiar de treinamento) de cada neurônio
             - mecanismo de treinamento (supervisionado ou não ou pesos fixos)
-                - se supervisionado: usar base de teste 
+                - se supervisionado: usar base de teste (amostra)
 
         TIPOS DE TREINAMENTO:
             - supervisionado: classificação (talvez o mais aplicado), regressão

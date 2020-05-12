@@ -1,0 +1,4 @@
+/Users/alexandrezamberlan/codigos/ia_jogosDigitais/5 - RNA/RNA_perceptron/RNA_perceptron/obj/Debug/netcoreapp3.1/RNA_perceptron.csprojAssemblyReference.cache
+/Users/alexandrezamberlan/codigos/ia_jogosDigitais/5 - RNA/RNA_perceptron/RNA_perceptron/obj/Debug/netcoreapp3.1/RNA_perceptron.csproj.CoreCompileInputs.cache
+/Users/alexandrezamberlan/codigos/ia_jogosDigitais/5 - RNA/RNA_perceptron/RNA_perceptron/obj/Debug/netcoreapp3.1/RNA_perceptron.AssemblyInfoInputs.cache
+/Users/alexandrezamberlan/codigos/ia_jogosDigitais/5 - RNA/RNA_perceptron/RNA_perceptron/obj/Debug/netcoreapp3.1/RNA_perceptron.AssemblyInfo.cs
