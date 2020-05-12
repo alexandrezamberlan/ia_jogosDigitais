@@ -15,23 +15,23 @@ public class ProfessoresUFN {
     public static void main(String[] args) {
         int[] alexandre = {1, -1, 1, -1, 1}; //assumir que o professor é entrada
         int[] ia = {1, -1, 1, -1};           //assumir que a área do professor é saída
-        Professor palexandre = new Professor("alexandre", "ia", alexandre, ia);
+        Professor obj_alexandre = new Professor("alexandre", "ia", alexandre, ia);
         
         int[] reiner = {1, 1, 1, -1, -1};
-        int[] linguagem2 = {1, 1, -1, -1};
-        Professor preiner = new Professor("reiner", "linaguagem2", reiner, linguagem2);
+        int[] programacao = {1, 1, -1, -1};
+        Professor obj_reiner = new Professor("reiner", "programacao", reiner, programacao);
 
-        int[] fernando = {1, 1, -1, -1, 1};
-        int[] csharp = {1, -1, -1, 1};
-        Professor pfernando = new Professor("fernando", "csharp", fernando, csharp);
+        int[] cassio = {1, 1, -1, -1, 1};
+        int[] design = {1, -1, -1, 1};
+        Professor obj_cassio = new Professor("cassio", "design", cassio, design);
 
         List<Professor> listProfessores = new LinkedList<Professor>();
-        listProfessores.add(palexandre);
-        listProfessores.add(preiner);
-        listProfessores.add(pfernando);
+        listProfessores.add(obj_alexandre);
+        listProfessores.add(obj_reiner);
+        listProfessores.add(obj_cassio);
 
-        final int TAMPROFESSOR = alexandre.length;
-        final int TAMAREA = ia.length;
+        final int TAMPROFESSOR = alexandre.length; //poderia ser qq um dos professores
+        final int TAMAREA = ia.length; //poder ser qq uma das áreas
 
         int[][] pesos = new int[TAMPROFESSOR][TAMAREA]; //pesos fixos calculados pelos pares entrada-saída
 
@@ -39,8 +39,8 @@ public class ProfessoresUFN {
         for (int i = 0; i < TAMPROFESSOR; i++) {
             for (int j = 0; j < TAMAREA; j++) {
                 pesos[i][j] = alexandre[i] * ia[j]
-                        + reiner[i] * linguagem2[j]
-                        + fernando[i] * csharp[j];
+                        + reiner[i] * programacao[j]
+                        + cassio[i] * design[j];
             }
         }
 
@@ -57,7 +57,7 @@ public class ProfessoresUFN {
         //entrar com 
         // int[] alexandre = {1, -1, 1, -1, 1};       
         //int[] reiner = {1, 1, 1, -1, -1};
-        //int[] fernando = {1, 1, -1, -1, 1};
+        //int[] cassio = {1, 1, -1, -1, 1};
         for (int j = 0; j < TAMAREA; j++) {
             saidaArea[j] = 0;
             for (int i = 0; i < TAMPROFESSOR; i++) {
@@ -80,6 +80,11 @@ public class ProfessoresUFN {
                 saidaArea[i] = 1;
             }
             saida.append(saidaArea[i]);
+        }
+
+        System.out.println("\n\nResultado da aplicação da função de ativação tipo Sign\n");
+        for (int i = 0; i < saidaArea.length; i++) {
+            System.out.print(saidaArea[i] + "\t");
         }
 
         System.out.println("\n\nResultado da aplicação da função sign:");
