@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace RNA
-{
-    
+
     class Program
     {
         static double somatorio(List<Int32> e, List<Double> p) {
@@ -26,7 +24,7 @@ namespace RNA
             // Perceptron p = new Perceptron(10);
             // Console.WriteLine("Teste de saída: " + p.saida);
 
-            /*
+            
             List<Int32> entradas = new List<Int32>();
             List<Double> pesos = new List<Double>();
             //5 3 10
@@ -43,16 +41,8 @@ namespace RNA
             Console.WriteLine(soma);
 
             int ativar = ativacaoStep(soma);
-            Console.WriteLine(ativar);*/
+            Console.WriteLine(ativar);
 
-            Perceptron_AND perceptron = new Perceptron_AND();
-
-            perceptron.treinar();
-
-            Console.WriteLine("Para aprender o algoritmo treinou " + perceptron.contaGeracoes + " geracoes! \n ");
-
-            perceptron.testar();
 
         }
     }
-}
