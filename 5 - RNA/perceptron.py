@@ -117,11 +117,14 @@ amostras = [[0.72, 0.82],   [0.91, -0.69],
 
 saidas = [-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
  
-# Chamar classe e fazer treinamento
-taxa_aprendizado=0.1
+# Chamar classe e fazer treinamento 
+taxa_aprendizado=0.1 #probabilidade: 0 a 1 
 geracoes=1000
 limiar=1
 rede = Perceptron(amostras, saidas, taxa_aprendizado, geracoes, limiar)
+
+
+
 rede.treinar()
 
 for i in range(5):
