@@ -27,6 +27,9 @@ namespace RNA_perceptron
             //0 e 1 = 0 - Terceiro Valor
             //1 e 1 = 1 - Quarto Valor
 
+            Console.WriteLine("Usando length para toda a matriz: " + matrizAprendizado.Length);
+            Console.WriteLine("Usando GetLength(0) para a quantidade de linhas: " + matrizAprendizado.GetLength(0));
+
             // Primeira linha da tabela verdade
             this.matrizAprendizado[0, 0] = 0; // entrada 1
             this.matrizAprendizado[0, 1] = 0; // entrada 2
@@ -75,16 +78,16 @@ namespace RNA_perceptron
         // Método para treinamento da rede
         public void treinar()
         {
-
             // variavel utilizada responsável pelo controle do treinamento recebe falso
             bool aprendeu; //aprendeu
             // varável responsável para receber o valor da saída (y)
             int saida;
+            int qtdLinhas = matrizAprendizado.GetLength(0);
             do
             {
                 aprendeu = true;
                 // laço usado para fazer todas as entradas
-                for (int i = 0; i < matrizAprendizado.Length; i++)
+                for (int i = 0; i < qtdLinhas; i++)
                 {
                     // A saída recebe o resultado da rede que no caso é 1 ou 0
                     saida = executar(matrizAprendizado[i, 0], matrizAprendizado[i, 1]);
@@ -130,4 +133,4 @@ namespace RNA_perceptron
         }
     }
 }
-}
+

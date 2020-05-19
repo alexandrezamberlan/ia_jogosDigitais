@@ -1,8 +1,5 @@
 
-REDES NEURAIS ARTIFICIAIS => Aprendizado (treinamento) de máquina => RECONHECIMENTO DE PADRÕES
-
-        reconhecer só ocorre depois de treinarmos
-
+REDES NEURAIS ARTIFICIAIS => Aprendizado de máquina => RECONHECIMENTO DE PADRÕES
         -> vários algoritmos (tipo de treinamento, topologia (quantas camadas),
                               tipo propagação (feedforward ou feedback propagations))
 
@@ -25,8 +22,8 @@ REDES NEURAIS ARTIFICIAIS => Aprendizado (treinamento) de máquina => RECONHECIM
             - leitura
     
         Itens a observar/escutar/experimentar/ler
-            - atributos/características massivos
-            - pesos respectivos (que são a importância de cada atributo)
+            - atributos massivos
+            - pesos respectivos ()
 
         trabalha/exercita atributos e seus pesos => TREINAMENTO => APRENDIZADO DA MÁQUINA
 
@@ -43,17 +40,25 @@ REDES NEURAIS ARTIFICIAIS => Aprendizado (treinamento) de máquina => RECONHECIM
             - separar atributos (conjunto) em categorias, ou seja, em diferentes neurônios
             - definir as funções objetivos (limiar de treinamento) de cada neurônio
             - mecanismo de treinamento (supervisionado ou não ou pesos fixos)
-                - se supervisionado: usar base de teste (amostra)
+                - se supervisionado: usar base de teste 
 
         TIPOS DE TREINAMENTO:
             - supervisionado: classificação (talvez o mais aplicado), regressão
+                              Presença de um supervisor que informe a saída desejada
+
+                              Ex.: classificar categorias parafusos, identificar pela
+                              regra da vizinhança de que time/grupo um indivíduo pertence
 
             - não supervisionado: associação, agrupamento, detecção de desvios,
                                   padrões sequenciais, sumarização
+                              Ex.: identificar porções ou elementos em imagens sem que se  
+                                   saiba de fato a saída
 
             - pesos fixo (matemática) -> trabalhar sempre com um par (entrada x saída)
 
-            - reforço: ....
+            - reforço: 
+                      Ex.: Sistemas Multiagentes (agentes aprendem pelas interações - 
+                                                   penalizações)
 
         TREINAMENTO/APRENDIZAGEM SUPERVISIONADA (CLASSIFICAÇÃO):
             1) extrair características
