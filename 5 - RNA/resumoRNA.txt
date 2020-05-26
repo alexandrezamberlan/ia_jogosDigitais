@@ -74,4 +74,15 @@ REDES NEURAIS ARTIFICIAIS => Aprendizado de máquina => RECONHECIMENTO DE PADRÕ
             2) aplicar modelo treinado/aprendido
             3) reconhecer o desejado
 
+
+        TRATAMENTO DO ERRO EM TREINAMENTO SUPERVISIONADO (mais usado, mas não é o único)
+        - erro = saidaEsperada - saidaCalculadaGerada
+        - peso = peso + (taxaAprendizagem * entrada * erro)
         
+            IDEIA DO ALGORITMO DE TREINAMENTO   
+                enquanto (saida_gerada != saida_esperada)                   //erro existir
+                    para cada registro                                      //conjunto de entradas
+                        calcular a saída com os pesos atuais
+                        comparar a saida_esperada com a saida_gerada        //calculo erro
+                        para cada peso da rede
+                            peso = peso + (taxa_aprendizagem * entrada * erro)  //ajuste pesos

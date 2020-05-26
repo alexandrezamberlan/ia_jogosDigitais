@@ -1,1 +1,69 @@
-Aqui vou colocar resumo.
+SISTEMAS MULTIAGENTES = Inteligência Coletiva
+    - Parte da IA que tenta implementar o comportamento humano literalmente
+
+        - baseado no comportamento coletivo dos animais (COLMÉIAS E FORMIGUEIROS)
+            - Swarm Intelligence
+      
+        - Mecanismos de percepção/sensores
+        - Mecanismos de atuação/motores
+        - Técnicas de planejamento
+            - IFs
+            - SWITCHs
+            - SOBRECARGA
+      
+        Sensorear X Planejar X Atuar (CICLO DE 'PENSAMENTO' PARA NPCs)
+    
+    - Unidade básica é o AGENTE 
+        - sensores (na camada de software é um tratador de evento)
+        - conjunto de planos
+        - atuadores (na camada de software é um método em execução)
+        - Características fundamentais:
+            - Autonomia - threads
+            - Proatividade - planos/métodos sobrecarregados
+            - Adaptação ou flexibilidade - tratamento de exceções
+            - Comunicação/Habilidade Social - socket (broadcast, multicast, unicast)
+                - enviar um fato/crença 
+                - enviar um questionamento/pergunta 
+                - enviar uma solicitação de plano/ações
+
+
+MODELAGEM DO AGENTE
+    1) evento ativador (trigger): interno (vem de outro agt ou dele mesmo) ou externo (vem do ambiente)
+    2) contexto ou condição
+    3) plano ou planos contigenciais: métodos de operação
+    4) atualização da base de conhecimento (faots/crenças)
+
+    Diagrama de atividades para modelar AGENTES:
+    1) (objetivos ou desejos) elencar planos (que o agente/npc pode ou deve realizar)
+        um plano pode chamar outro plano e pode conter um conjunto de ações 
+            - diretiva de comunicação (.send, .tell, .untell, .broadcast)
+            - ação em forma de método
+            - ação que ative um atuador
+
+    2) para cada plano, identificar os eventos ativadores (trigger) dele, bem como o contexto (condição)
+    
+    3) (intenção) realizar o plano ativado
+    
+    4) (crenças) atualizar base de crenças ou fatos
+
+
+
+
+Michael Brackmann (Teoria da Intencionalidade - Estados Mentais)
+BDI - Belief, Desire, Intention
+
+    crença      - fato 
+    desejo      - plano latente pensado - estado desejado futuro
+    intenção    - plano em execução (tem recursos alocados para atingir um desejo)
+    
+Vídeo no Youtube sobre modelagem de Agentes
+    - https://youtu.be/IBNh7j_F4yc    
+
+
+- FERRAMENTAS DE IMPLMENTAÇÃO DE SISTEMAS MULTIAGENTES
+    - JASON (PROLOG + JAVA) - CRENÇAS E PLANOS (DESEJOS OU INTENÇÕES)
+        - Paradigma Orientado a Agentes (plano, evento ativador, contexto, base de crença)
+        - MENTE (onde está todas as crenças/fatos armazenadas)
+
+    - UNITY + C# 
+        - Paradigma Orientado a Objetos (scripts == classe -> atributos e métodos)
