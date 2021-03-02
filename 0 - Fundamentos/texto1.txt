@@ -1,0 +1,63 @@
+Inteligência Artificial
+    - Sub-área da Computação (Engenheria da Computação, Ciência da Computação, Sistemas de Informação, Jogos Digitais, ...)
+        - Técnicas e metodologias para RESOLVER PROBLEMAS
+            - (1) Métodos de busca: cega ou heurística
+                - melhor caminho - path finding
+            - (2) Algoritmos Genéticos
+                - melhor caminho para problemas que não se sabe o estado final (variáveis e seus valores esperados) e 
+                  que possuem muitas restrições (condições/ifs)
+            - (3) Redes Neurais Artificiais
+                - reconhecimento de padrões -> aprendizagem de máquina -> adaptação
+            - (4) Mineração de Dados
+                - extração de conhecimento em base de dados
+            - (5) Agentes Inteligentes
+                - entidades autônomas, próativas, flexíveis, habilidade social (comunicação)
+
+    - Aplicação de técnicas ajuda na construção de SISTEMAS COM COMPORTAMENTO Inteligentes. Entretanto,
+      é possível construir sistemas com comportamento minimamente inteligentes sem uso de técnicas
+      de IA.
+
+
+O QUE É UM SISTEMA?
+    - conjunto de partes interrelacionadas para um fim específico
+    - conjunto de aspectos:
+        - estruturais: atributos/variáveis/propriedades 
+        - funcionais: métodos/comportamento/operações
+
+SISTEMA DE COMPORTAMENTO INTELIGENTE NO CONTEXTO DA IA
+    - Base de conhecimento: experiências armazenados (fatos, casos, ...)
+    (1)
+    (2)
+    (4)
+    (5)
+
+    - Motor para raciocínio/inferência automatizado
+        - dedutivo: vai do genérico ao específico
+        - indutivo: vai do específico ao genérico
+    (1)
+    (2)
+    (5)
+    
+    - Aprendizado de máquina
+        - reconhecimento de padrões
+    (3)
+    (4)
+    (5)
+     
+Exemplo:
+                         Reconheceu ?
+Programação:             public, class, int
+Orientada a objetos:     class, construtor
+Linguagem:               C#, C++,
+
+public class Teste {
+    int codigo;
+    String nome;
+
+    public Teste() {
+
+    }
+}
+
+INTELIGENTE?
+    - Capacidade de resolver problema em um contexto específico
