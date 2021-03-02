@@ -3,6 +3,13 @@ Inteligência Artificial
         - Técnicas e metodologias para RESOLVER PROBLEMAS
             - (1) Métodos de busca: cega ou heurística
                 - melhor caminho - path finding
+                - Modelar:
+                    - Estados (iniciais ou finais) -> atributos/variáveis
+                    - Regras de Transição -> métodos/operações
+                    - Restrições (condições/ifs)
+                    - Visitados (lista de estados já produzidos)
+                        - gera a poda
+
             - (2) Algoritmos Genéticos
                 - melhor caminho para problemas que não se sabe o estado final (variáveis e seus valores esperados) e 
                   que possuem muitas restrições (condições/ifs)
