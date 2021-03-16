@@ -1,0 +1,65 @@
+Problema da Torre de Hannoi
+    - 3 torres com n aneis, de baixo pra cima, do maior ao menor
+    - a quantidade de discos, aumenta a complexidade (esforço) dos movimentos
+    - um movimento por vez, ou seja, um disco é movimentado por vez
+    - há uma restrição, que é um disco maior não pode ficar em cima de um menor
+
+    n = 3 -> 7 movimentos -> 2ˆn - 1 = 2^3 - 1 = 7
+
+    n = 10 ->1023
+
+
+    Modelagem da solução do Problema
+    Estados
+        Stack torreA
+        Stack torreB
+        Stack torreC
+
+        Stack é uma classe em Java, C++ e C# que representa uma Pilha. Uma pilha é uma
+        estrutura de dados com alguns métodos prontos:
+            push() - insere algo no topo da pilha
+            pop() - remove algo do topo da pilha
+            isEmpty() - verifica se a pilha está vazia
+            peek() - captura o elemento que está no topo
+
+        Estado inicial
+            todos os discos na torreA, torreB vazia e torreC vazia
+
+            Stack torreA = new Stack();
+            Stack torreB = new Stack();
+            Stack torreC = new Stack();
+            for (i = n; i > 0; i--) {
+                torreA.push(i);
+            }
+
+        Estado final em forma de método
+        boolean ehMeta() {
+            return torreA.isEmpy() && torreB.isEmpty();
+        }
+
+    Regras
+        R1) move topo torreA para topo torreB
+            void moveTorreA_torreB() {
+                torreB.push(torreA.pop());
+            }
+        R2) move topo torreA para topo torreC
+        R3) move topo torreB para topo torreA
+        R4) move topo torreB para topo torreC
+        R5) move topo torreC para topo torreA
+        R6) move topo torreC para topo torreB
+
+    Restrição
+        disco do topo da origem não pode ser maior que o disco do topo do destino ou
+        a origem ser vazia
+
+        boolean ehValido(Stack origem, Stack destino) {
+            if (origem.isEmpyt() || ((int)origem.peek() > (int)destino.peek()) {
+                return false;
+            }
+        }
+
+    Visitados
+        "[3,2,1][][]"
+        "[3,2][][1]"
+        "[3][2][1]"
+        "[3][2,1][]"
