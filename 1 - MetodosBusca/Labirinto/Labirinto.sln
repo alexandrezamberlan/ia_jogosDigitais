@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.106
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.809.2
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labirinto", "Labirinto\Labirinto.csproj", "{F7C06A72-6F5D-416A-AF7D-DA2215F2E086}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "labirinto", "labirinto\labirinto.csproj", "{66A81519-3796-4847-A128-92A1F207212A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F7C06A72-6F5D-416A-AF7D-DA2215F2E086}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F7C06A72-6F5D-416A-AF7D-DA2215F2E086}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F7C06A72-6F5D-416A-AF7D-DA2215F2E086}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F7C06A72-6F5D-416A-AF7D-DA2215F2E086}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66A81519-3796-4847-A128-92A1F207212A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66A81519-3796-4847-A128-92A1F207212A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66A81519-3796-4847-A128-92A1F207212A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66A81519-3796-4847-A128-92A1F207212A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {BAB4769C-8E7C-4C59-A3F9-6448B913122D}
+		SolutionGuid = {E7609997-1D9F-425F-BE12-5CA9C979CBC7}
 	EndGlobalSection
 EndGlobal

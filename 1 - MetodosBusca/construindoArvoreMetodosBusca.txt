@@ -1,0 +1,74 @@
+A partir do Mapa da Romênia e da tabela de estimativa para chegar em Bucharest, construa as 
+árvores, mostre o caminho e o valor total da distância entre Lugoj e Bucharest.
+
+AMPLITUDE/LARGURA (método de força bruta)
+Fila -> abre todos os nodos adjacentes 
+Obs.: um nodo aberto é um nodo visitado (só em amplitude)
+
+                                    L
+                        M                       T 
+                D                           A   
+            C                         S         Z
+        P       RV                 F            O 
+    B
+
+L M D C P B -> 504 
+============================
+
+PROFUNDIDADE (método de força bruta)
+Pilha -> abre um no por vez, sempre o primeiro e se não, pega o próximo
+
+                                    L 
+                        M 
+                    D
+                C 
+            P
+        B
+
+L M D C P B -> 504 
+=============================
+
+SUBIDA DE ENCOSTA 
+Pilha só que sem volta ou sem backtracking (voltar pelo caminho que foi)
+tem como base o custo real
+
+                                    L
+                            M 70
+                        D 75
+                    C 120
+                P 138
+            RV 97
+        S 80
+    F 99
+B 211
+
+L M D C P RV S F B -> 890
+===========================
+
+GULOSO
+Fila -> análise dos nodos 'tios'
+tem como base o custo estimado
+
+                                    L
+                        M 241   
+                D 242
+            C 160
+    P 100           
+B 0       RV 193
+
+L M D C P B -> 504 
+==========================
+
+A*
+Fila -> análise dos nodos 'tios'
+tem como base o acúmulo do custo real + o custo estimado, com isso
+corrigi qualquer imperfeição na heurística
+
+                                         L 
+                        M 70+241= 311  
+                D 145+242= 387
+            C 265+160= 525
+        P 403+100= 503      
+B 504+0= 504        RV 500+193= 693
+
+L M D C P B -> 504 
