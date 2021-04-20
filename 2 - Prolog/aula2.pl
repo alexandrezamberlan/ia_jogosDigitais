@@ -34,4 +34,3 @@ insc( 9, 200001 ).
 inscrito( al(Num,Nome), cur(Cod,Sigla) ) :- aluno( Num,Nome ),
                                             curso( Cod,Sigla ),
                                             insc( Num,Cod ).
-                    

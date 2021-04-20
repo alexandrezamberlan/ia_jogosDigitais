@@ -4,7 +4,7 @@ bonito( caderno ).
 bonito( candeeeiro ).
 bonito( computador ).
 bonito( vinho ).
-bonito( cognac ).
+bonito( violao ).
 bonito( fruta ).
 
 bom( caderno ).
@@ -17,7 +17,6 @@ bom( carne ).
 bom( computador ).
 
 barato( caderno ).
-barato( computador ).
 barato( leite ).
 barato( vinho ).
 barato( fruta ).
@@ -30,7 +29,8 @@ preciso( ovos ).
 preciso( peixe ).
 preciso( ervilhas ).
 preciso( sabonete ).
-preciso( 'pão' ).
+preciso( pao ).
+preciso( leite ).
 
 %--As COISAS que na verdade vou comprar.
 % 
@@ -46,4 +46,9 @@ superfluo( Coisa ) :- bonito( Coisa ),
                       not(barato( Coisa )),
                       not(preciso( Coisa )).
 
-inutil( Coisa ) :- not(bonito(Coisa)), not(barato(Coisa)).                      
+inutil( Coisa ) :- not(bonito(Coisa)), not(barato(Coisa)).
+
+
+
+% ! no Prolog é a poda
+% not no Prolog é a negação
