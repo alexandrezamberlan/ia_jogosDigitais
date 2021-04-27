@@ -35,7 +35,9 @@ Pássaros gostam de minhoca.
 A dona de Frajola é Joana. 
 Gatos gostam de peixe. Gatos gostam de pássaros. 
 Amigos se gostam. O gato de Joana é amigo dela. 
-Os gatos comem tudo que eles gostam”. Utilizando Prolog, crie a base de 
+Os gatos comem tudo que eles gostam”. 
+
+Utilizando Prolog, crie a base de 
 conhecimento para o relato acima. 
 Crie também uma regra que descubra de que se alimenta Frajola.
 

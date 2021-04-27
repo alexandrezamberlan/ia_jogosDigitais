@@ -38,6 +38,10 @@ jogaOque(Jogador, Jogo, Sigla, DescricaoEstilo, Idade) :-
 	sigla(E, DescricaoEstilo),
 	jogando(Jogador, Jogo).
 
+
+
+
+
 a_direita_de(maria,joao).
 a_direita_de(jose,maria).
 a_direita_de(julia,jose).
@@ -63,10 +67,10 @@ noMeio(PessoaEsq, PessoaMeio, PessoaDir) :-
 %	writeln(" ponta esquerda").
 
 ta_na_ponta(Pessoa) :- a_direita_de(Pessoa, _),
-                       not(a_direita_de(_,Pessoa)).                       	
+                       not(a_direita_de(_,Pessoa)). %ultima pessoa                       	
 					   
 ta_na_ponta(Pessoa) :- a_esquerda_de(Pessoa, _),
-                       not(a_esquerda_de(_,Pessoa)).    
+                       not(a_esquerda_de(_,Pessoa)).%primeira pessoa    
 
 
 
@@ -75,11 +79,11 @@ ta_na_ponta(Pessoa) :- a_esquerda_de(Pessoa, _),
 escreverDecrescente(Numero) :- Numero == -1, !.
 escreverDecrescente(Numero) :- writeln(Numero), 
 							   N is Numero - 1,
-                               escreverDecrescente(N). 
+                               escreverDecrescente(N). %ponto de recursão
 
 escreverCrescente(Numero) :- Numero == -1, !.
 escreverCrescente(Numero) :- N is Numero - 1,
-                             escreverCrescente(N),
+                             escreverCrescente(N), %ponto recursão
 							 writeln(Numero).
 							 
 							  
@@ -87,7 +91,7 @@ fatorial(0,1).
 fatorial(Numero,Resposta) :-
    Numero > 0,
    N is Numero - 1,
-   fatorial(N,R),
+   fatorial(N,R), %ponto da recursão
    Resposta is Numero * R.							  
 							  
 
@@ -100,7 +104,19 @@ conecta(f,d,115).
 conecta(f,g,15).
 conecta(g,h,30).
 conecta(h,c,200).
+
 caminho(O,D,CustoFinal) :- conecta(O,D,CustoFinal).
-caminho(O,D,CustoFinal) :- conecta(O,I,CustoIntermediario),                           
+caminho(O,D,CustoFinal) :- conecta(O,I,CustoIntermediario),  
+						   writeln(I),
 						   caminho(I,D,CustoAcumulado),
                            CustoFinal is CustoIntermediario + CustoAcumulado.						   
+					   
+
+
+progenitor(homero, "homero filho").
+progenitor("homero filho", bianca).
+progenitor(bianca, breno).
+progenitor(breno, alexandre).
+caminho(O,D) :- progenitor(O,D).
+caminho(O,D) :- progenitor(O, I),
+                caminho(I,D).
