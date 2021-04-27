@@ -21,14 +21,18 @@ tenente(10,azul).
 tenente(5,vermelho).
 tenente(20,dourado).
 
-relevo(morro,diamante).
-relevo(planicie,fogo).
+%5 é melhor que 1
+relevo(morro,diamante,5).
+relevo(morro,ouro,3).
+relevo(planicie,fogo,4).
+relevo(rio,guaiba,1).
 
 estaPosicionado(azul,esquerda,guaiba).
 estaPosicionado(vermelho,direita,guaiba).
 estaPosicionado(azul,sobre, diamante).
 estaPosicionado(vermelho, sobre, fogo).
 estaPosicionado(dourado,esquerda,guaiba).
+estaPosicionado(dourado,sobre,guaiba).
 
 altoEscalao(Quantidade, Exercito) :- general(Q1, Exercito),
                                      capitao(Q2, Exercito),
@@ -49,14 +53,19 @@ vantagem(Exercito1, Exercito2) :- exercito(Exercito1, Q1),
 vantagem(Exercito1, Exercito2) :- exercito(Exercito1,_),
                                   exercito(Exercito2,_),
                                   estaPosicionado(Exercito1,sobre,Nome1),
-    							  relevo(Relevo1,Nome1),
-                                  Relevo1 == morro,
+    							  relevo(_,Nome1,Vantagem1),
                                   Exercito1 \== Exercito2,
                                   estaPosicionado(Exercito2,sobre,Nome2),
-                                  relevo(Relevo2,Nome2),
-                                  Relevo2 \== morro,
+                                  relevo(_,Nome2, Vantagem2),
+								  Vantagem1 > Vantagem2,
                                   writeln(" esta melhor posicionado no campo de batalha").
 
 vantagem(Exercito1, Exercito2) :- aliado(Exercito1, _),
                                   not(aliado(Exercito2,_)),
                                   writeln("possui o aliado ").
+            
+fragil(Exercito) :- exercito(Exercito, _),
+                    estaPosicionado(Exercito, sobre, Nome),
+                    relevo(Relevo, Nome, Vantagem),
+                    Vantagem < 2,
+                    writeln(Relevo).
