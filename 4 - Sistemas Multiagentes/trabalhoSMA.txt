@@ -1,0 +1,26 @@
+Tarefa final da disciplina
+
+Dividida em 2 partes:
+    1) modelagem dos comportamentos dos agentes do jogo (todos devem fazer)
+        - é o quadro de planejamento de comportamento de agentes    
+            Colunas: nome do agente; plano ou evento ativador do agente; contexto ou condição; corpo do plano (ações);
+                     atualização da base de crenças do agente modelado
+
+    2) implementação do jogo na Unity 2D ou 3D
+
+O jogo ou o desafio entre agentes. Isso significa que podemos fazer só uma simulação entre 4 personagens agentes, que
+são autonomos, proativos (ciclo perceber e agir), adaptáveis e que se comunicam entre si. Ou um jogo entre humano e 
+computador. O humano controlaria via teclado 2 personagens e o computador executaria 2 agentes inteligentes.
+
+O jogo ou a simulação é como um campo de batalha, dividido em 2 partes. Em cada parte há a área de defesa do respectivo
+time. Um time é composto por 2 agentes/personagens: um catcher (que tenta capturar a bola que surge no campo) e um 
+defensor (que tenta pegar o catcher do time adversário).
+
+Um catcher deve estar sempre atento ao surgimento da bola no campo (que pode surgir em qualquer posição do centro) e 
+atento ao defensor do outro time. Aí vem a "inteligência" dos catchers.... quando fugir (voltar pra base) ou quando
+continuar a tentativa de capturar a bola.
+
+
+
+
+

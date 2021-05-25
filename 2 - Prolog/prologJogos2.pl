@@ -40,8 +40,9 @@ altoEscalao(Quantidade, Exercito) :- general(Q1, Exercito),
 
 aliado(Exercito1, Exercito2) :- exercito(Exercito1,_),
                                 exercito(Exercito2,_),
-                                estaPosicionado(Exercito1,Lugar,guaiba),
-                                estaPosicionado(Exercito2,Lugar,guaiba),
+                                estaPosicionado(Exercito1,Lugar,Nome),
+                                estaPosicionado(Exercito2,Lugar,Nome),
+                                relevo(rio,Nome,_),
                                 Exercito1 \== Exercito2.
                           
 vantagem(Exercito1, Exercito2) :- exercito(Exercito1, Q1),

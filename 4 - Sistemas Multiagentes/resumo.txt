@@ -1,27 +1,28 @@
-SISTEMAS MULTIAGENTES = Inteligência Coletiva
-    - Parte da IA que tenta implementar o comportamento humano literalmente
+SISTEMAS MULTIAGENTES = Inteligência Coletiva e Distribuída
+    - Parte da IA que tenta implementar o comportamento humano literalmente de forma distribuída (princípio do dividir para conquistar)
 
-        - baseado no comportamento coletivo dos animais (COLMÉIAS E FORMIGUEIROS)
+        - baseado no comportamento coletivo dos animais (COLMÉIAS E FORMIGUEIROS, etc)
             - Swarm Intelligence
       
-        - Mecanismos de percepção/sensores
-        - Mecanismos de atuação/motores
-        - Técnicas de planejamento
-            - IFs
-            - SWITCHs
-            - SOBRECARGA
-      
-        Sensorear X Planejar X Atuar (CICLO DE 'PENSAMENTO' PARA NPCs)
+        - um sistema multiagente tem como elemento base o agente -> estrutura de software ou uma estrutura de software + hardware
+            - Mecanismos de percepção/sensores
+            - Mecanismos de atuação/motores
+            - Técnicas de planejamento
+                - IFs
+                - SWITCHs
+                - SOBRECARGA - sentenças ou declarações lógicas
+        
+            Sensorear X Planejar X Atuar (CICLO DE 'PENSAMENTO' PARA NPCs)
     
     - Unidade básica é o AGENTE 
-        - sensores (na camada de software é um tratador de evento)
-        - conjunto de planos
+        - sensores (na camada de software é um tratador de evento - todo evento pode ser percebido num collider)
+        - conjunto de planos -> métodos ou predicados
         - atuadores (na camada de software é um método em execução)
         - Características fundamentais:
-            - Autonomia - threads
-            - Proatividade - planos/métodos sobrecarregados
-            - Adaptação ou flexibilidade - tratamento de exceções
-            - Comunicação/Habilidade Social - socket (broadcast, multicast, unicast)
+            - Autonomia - threads ou na unity co-rotina
+            - Proatividade  -> C# com sobrecarga de um método
+            - Adaptação ou flexibilidade - C# ou Unity com tratamento de exceções
+            - Comunicação/Habilidade Social - C# com socket.io (broadcast, multicast, unicast) ou Unity com Photon (plugin)
                 - enviar um fato/crença 
                 - enviar um questionamento/pergunta 
                 - enviar uma solicitação de plano/ações
@@ -31,7 +32,7 @@ MODELAGEM DO AGENTE
     1) evento ativador (trigger): interno (vem de outro agt ou dele mesmo) ou externo (vem do ambiente)
     2) contexto ou condição
     3) plano ou planos contigenciais: métodos de operação
-    4) atualização da base de conhecimento (faots/crenças)
+    4) atualização da base de conhecimento (fatos/crenças)
 
     Diagrama de atividades para modelar AGENTES:
     1) (objetivos ou desejos) elencar planos (que o agente/npc pode ou deve realizar)
