@@ -1,4 +1,10 @@
 AG
+Vídeos no contexto de jogos aplicando AG: 
+
+https://www.youtube.com/watch?v=NIzDYdOoNdQ
+https://rednuht.org/genetic_cars_2/
+
+
 	- método de busca
 	- tipo de problema com muitas restrições e sem o conhecimento do estado final
 

@@ -105,7 +105,7 @@ static class Program
 
         int i = 0;
         do {
-            pai = populacao[ gerador.Next( populacao.Count ) ];
+            pai = populacao[ gerador.Next( (int)populacao.Count / 3 ) ];
 
             do {
                 mae = populacao[ gerador.Next( populacao.Count ) ];
@@ -132,7 +132,7 @@ static class Program
             i = i + 2;
         } while (i < qtdReproduzidos);
 
-        
+    
     }
 
 
@@ -140,7 +140,7 @@ static class Program
     {
         Random gerador = new Random();
 
-        int qtdMutantes = gerador.Next(populacao.Count); //20% NO MÁXIMO DE MUTANTES
+        int qtdMutantes = gerador.Next((int)populacao.Count / 5); //20% NO MÁXIMO DE MUTANTES
 
         Cromossomo mutante;
         int posicaoMutante;
@@ -181,21 +181,22 @@ static class Program
         int taxaMutacao;
         int tamanhoPopulacao;
 
-        //Console.Write("Qual a palavra ou frase que quer testar como estado final? ");
-        //estadoFinal = Console.ReadLine();
-        estadoFinal = "inteligencia";
+        Console.Write("Qual a palavra ou frase que quer testar como estado final? ");
+        estadoFinal = Console.ReadLine();
+        //estadoFinal = "inteligencia";
 
         Console.Write("Quantas gerações pretende executar? "); //serve para o for
         quantidadeGeracoes = Int32.Parse( Console.ReadLine() );
 
-        //do {
-        //    Console.Write("Taxa de seleção (10-90): ");
-        //    taxaSelecao = Int32.Parse( Console.ReadLine() );
-        //    taxaReproducao = 100 - taxaSelecao;
-        //} while (taxaSelecao <= 10 || taxaSelecao > 90);
+        do
+        {
+            Console.Write("Taxa de seleção (10-90): ");
+            taxaSelecao = Int32.Parse(Console.ReadLine());
+            taxaReproducao = 100 - taxaSelecao;
+        } while (taxaSelecao <= 10 || taxaSelecao > 90);
 
-        taxaSelecao = 70;
-        taxaReproducao = 100 - taxaSelecao;
+        //taxaSelecao = 70;
+        //taxaReproducao = 100 - taxaSelecao;
 
         do {
             Console.Write("Taxa de mutação (1-5%): ");
@@ -235,8 +236,7 @@ static class Program
             populacao.Clear();
             // Util.adicionaTodos(populacao,novaPopulacao);
             populacao.AddRange( novaPopulacao ); 
-            novaPopulacao.Clear();    
+            novaPopulacao.Clear();
         }
-        
     }
 }
