@@ -26,7 +26,7 @@ namespace PreparandoParaIA_jogos
                         Movimenta.moverCima(matriz, TAM);
                         break;
                     case 's' :
-                        Console.WriteLine("Indo para cima");
+                        Console.WriteLine("Indo para baixo");
                         Movimenta.moverBaixo(matriz, TAM);
                         break;
                     

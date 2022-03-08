@@ -69,12 +69,14 @@ namespace labirinto
                     estadoGerado = estadoGerado + this.matriz[i, j];
                 }
             }
-            visitados.Add(estadoGerado);
+            if (!visitados.Contains(estadoGerado)) {
+                visitados.Add(estadoGerado);
+            }
             //visitados = ["oooeoooooooosooooo"][][][][][][]
         }
 
 
-        private String geraEstado()
+        private String geraEstado() //gera o stringao da matriz como um estado
         {
             String estadoGerado = "";
             //gravar o estado gerado em uma string para visitados

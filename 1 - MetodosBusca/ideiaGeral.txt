@@ -43,6 +43,9 @@ Problema da Torre de Hannoi
                 torreB.push(torreA.pop());
             }
         R2) move topo torreA para topo torreC
+                
+                torreC.push(torreA.pop());
+
         R3) move topo torreB para topo torreA
         R4) move topo torreB para topo torreC
         R5) move topo torreC para topo torreA
@@ -56,10 +59,11 @@ Problema da Torre de Hannoi
             if (origem.isEmpyt() || ((int)origem.peek() > (int)destino.peek()) {
                 return false;
             }
+            return true;
         }
 
     Visitados
-        "[3,2,1][][]"
-        "[3,2][][1]"
-        "[3][2][1]"
-        "[3][2,1][]"
+        "[3,2,1][][]" - estado inicial
+        "[3,2][][1]"  - moveu da torreA para torreC
+        "[3][2][1]"   - moveu da torreA para torreB
+        "[3][2,1][]"  - moveu da torreC para torreB

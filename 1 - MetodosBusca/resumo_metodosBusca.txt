@@ -1,19 +1,74 @@
 SISTEMAS DE COMPORTAMENTO INTELIGENTE
 
-    BASE DE CONHECIMENTO - adquirida com tempo/experiência
-    MOTOR DE RACIOCÍNIO/INFERÊNCIA
+    (1)BASE DE CONHECIMENTO - adquirida com tempo/experiência
+    (2)MOTOR DE RACIOCÍNIO/INFERÊNCIA
         dedutivo - do genérico ao específico
         indutivo - do específico ao genérico
-    APRENDIZAGEM ou RECONHECIMENTO DE PADRÕES
+    (3)APRENDIZAGEM ou RECONHECIMENTO DE PADRÕES
 
 Quais são os tipos de problemas para a IA ou SCI?
 
     estados (inicial, intermediários e finais)
+        - matriz 3 X 3, com números de 0 a 3*3 - 1 embaralhados, sendo que o zero é o espaço vazio
+        E0 - matriz embaralhada
+        Ef -    0   1   2 
+                3   4   5
+                6   7   8  
+                
     regras de transição (métodos/operações)
+        r1) movimentarCima()
+        r2) movimentarBaixo()
+        r3) movimentarEsquerda()
+        r4) movimentarDireita()
+
     heurística (dica) - que pode ser falha ou inadimissível
+        Há duas possíveis dicas/heurísticas
+        1) movimentar a peça que estiver mais distante da sua posição
+                1   4   6
+                0   2   3
+                5   8   7
+
+                1   4   6
+                5   2   3
+                0   8   7
+        2) evitar de movimentar números/casas que já estão na sua posição final
+
+
+        Exemplo de força bruta por LARGURA/amplitude
+        r1) movimentarCima()
+        r2) movimentarBaixo()
+        r3) movimentarEsquerda()
+        r4) movimentarDireita()
+                                            1   4   6
+                                            0   2   3
+                                            5   8   7
+                                            "146023587"
+
+                            0   4   6       1   4   6           1   4   6               
+                            1   2   3       5   2   3           2   0   3           
+                            5   8   7       0   8   7           5   8   7       
+                            "046123587"     "146523087"         "146203587"            
+
+                    4   0   6               
+                    1   2   3           
+                    5   8   7       
+                    "406123587"            
+
     restrições (if) - quanto mais, mais complexidade (esforço)
+        MOVER PRA CIMA SÓ PODE SE 0 NÃO ESTIVER NA PRIMEIRA LINHA
+        MOVER PRA BAIXA SÓ PODE SE 0 NÃO ESTIVER NA ULTIMA LINHA
+        MOVER PRA ESQUERDA SÓ PODE SE 0 NÃO ESTIVER NA PRIMEIRA COLUNA
+        MOVER PRA DIREITA SÓ PODE SE 0 NÃO ESTIVER NA ÚLTIMA COLUNA
+
     visitados/sucessores/abertos (que consome memória)
+        TRANSFORMAR CADA ESTADO/MATRIZ GERADO/A EM UM STRINGAO E ARMAZENAR EM UMA LISTA ENCADEADA COM CONTROLE DE 
+        DUPLICIDADE.
+
     função objetivo/meta/fim
+        boolean ehMeta(String estado) {
+            return estado.equals("012345678");
+        }
+
 
 Técnicas são de resolução de problemas
 
