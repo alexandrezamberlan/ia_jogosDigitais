@@ -11,11 +11,20 @@ namespace Sudoku
             Console.Write("Qual o nome (caminho) do arquivo com um cenário sudoku inicial? ");
             nomeDoArquivoSudoku = Console.ReadLine();
 
-            Sudoku solucao1 = new Sudoku(9);
+            Sudoku solucao1 = new Sudoku();
 
-            if ( solucao1.populaDoArquivo(nomeDoArquivoSudoku) )
+            if ( solucao1.popularDoArquivo(nomeDoArquivoSudoku) )
             {
-                solucao1.exibirSudoku();
+          
+                solucao1.exibirSudoku("Arquivo de cenário localizado!");
+
+                if (solucao1.resolveSudoku(1))
+                {
+                    solucao1.exibirSudoku("\n\nCenário resolvido com sucesso!");
+                } else
+                {
+                    Console.WriteLine("Cenário não resolvido! A configuração inicial do sudoku está complexa!");
+                }
             }
 
             
