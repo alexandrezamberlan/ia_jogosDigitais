@@ -1,0 +1,16 @@
+C:\Users\laboratorio\source\repos\AG_Caxeiro\bin\Debug\net5.0\AG_Caxeiro.exe
+C:\Users\laboratorio\source\repos\AG_Caxeiro\bin\Debug\net5.0\AG_Caxeiro.deps.json
+C:\Users\laboratorio\source\repos\AG_Caxeiro\bin\Debug\net5.0\AG_Caxeiro.runtimeconfig.json
+C:\Users\laboratorio\source\repos\AG_Caxeiro\bin\Debug\net5.0\AG_Caxeiro.runtimeconfig.dev.json
+C:\Users\laboratorio\source\repos\AG_Caxeiro\bin\Debug\net5.0\AG_Caxeiro.dll
+C:\Users\laboratorio\source\repos\AG_Caxeiro\bin\Debug\net5.0\ref\AG_Caxeiro.dll
+C:\Users\laboratorio\source\repos\AG_Caxeiro\bin\Debug\net5.0\AG_Caxeiro.pdb
+C:\Users\laboratorio\source\repos\AG_Caxeiro\obj\Debug\net5.0\AG_Caxeiro.csproj.AssemblyReference.cache
+C:\Users\laboratorio\source\repos\AG_Caxeiro\obj\Debug\net5.0\AG_Caxeiro.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\laboratorio\source\repos\AG_Caxeiro\obj\Debug\net5.0\AG_Caxeiro.AssemblyInfoInputs.cache
+C:\Users\laboratorio\source\repos\AG_Caxeiro\obj\Debug\net5.0\AG_Caxeiro.AssemblyInfo.cs
+C:\Users\laboratorio\source\repos\AG_Caxeiro\obj\Debug\net5.0\AG_Caxeiro.csproj.CoreCompileInputs.cache
+C:\Users\laboratorio\source\repos\AG_Caxeiro\obj\Debug\net5.0\AG_Caxeiro.dll
+C:\Users\laboratorio\source\repos\AG_Caxeiro\obj\Debug\net5.0\ref\AG_Caxeiro.dll
+C:\Users\laboratorio\source\repos\AG_Caxeiro\obj\Debug\net5.0\AG_Caxeiro.pdb
+C:\Users\laboratorio\source\repos\AG_Caxeiro\obj\Debug\net5.0\AG_Caxeiro.genruntimeconfig.cache
