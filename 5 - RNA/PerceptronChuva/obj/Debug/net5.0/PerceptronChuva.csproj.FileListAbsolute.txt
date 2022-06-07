@@ -1,0 +1,16 @@
+C:\Users\laboratorio\source\repos\ia_jogosDigitais\5 - RNA\PerceptronChuva\bin\Debug\net5.0\PerceptronChuva.exe
+C:\Users\laboratorio\source\repos\ia_jogosDigitais\5 - RNA\PerceptronChuva\bin\Debug\net5.0\PerceptronChuva.deps.json
+C:\Users\laboratorio\source\repos\ia_jogosDigitais\5 - RNA\PerceptronChuva\bin\Debug\net5.0\PerceptronChuva.runtimeconfig.json
+C:\Users\laboratorio\source\repos\ia_jogosDigitais\5 - RNA\PerceptronChuva\bin\Debug\net5.0\PerceptronChuva.runtimeconfig.dev.json
+C:\Users\laboratorio\source\repos\ia_jogosDigitais\5 - RNA\PerceptronChuva\bin\Debug\net5.0\PerceptronChuva.dll
+C:\Users\laboratorio\source\repos\ia_jogosDigitais\5 - RNA\PerceptronChuva\bin\Debug\net5.0\ref\PerceptronChuva.dll
+C:\Users\laboratorio\source\repos\ia_jogosDigitais\5 - RNA\PerceptronChuva\bin\Debug\net5.0\PerceptronChuva.pdb
+C:\Users\laboratorio\source\repos\ia_jogosDigitais\5 - RNA\PerceptronChuva\obj\Debug\net5.0\PerceptronChuva.csproj.AssemblyReference.cache
+C:\Users\laboratorio\source\repos\ia_jogosDigitais\5 - RNA\PerceptronChuva\obj\Debug\net5.0\PerceptronChuva.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\laboratorio\source\repos\ia_jogosDigitais\5 - RNA\PerceptronChuva\obj\Debug\net5.0\PerceptronChuva.AssemblyInfoInputs.cache
+C:\Users\laboratorio\source\repos\ia_jogosDigitais\5 - RNA\PerceptronChuva\obj\Debug\net5.0\PerceptronChuva.AssemblyInfo.cs
+C:\Users\laboratorio\source\repos\ia_jogosDigitais\5 - RNA\PerceptronChuva\obj\Debug\net5.0\PerceptronChuva.csproj.CoreCompileInputs.cache
+C:\Users\laboratorio\source\repos\ia_jogosDigitais\5 - RNA\PerceptronChuva\obj\Debug\net5.0\PerceptronChuva.dll
+C:\Users\laboratorio\source\repos\ia_jogosDigitais\5 - RNA\PerceptronChuva\obj\Debug\net5.0\ref\PerceptronChuva.dll
+C:\Users\laboratorio\source\repos\ia_jogosDigitais\5 - RNA\PerceptronChuva\obj\Debug\net5.0\PerceptronChuva.pdb
+C:\Users\laboratorio\source\repos\ia_jogosDigitais\5 - RNA\PerceptronChuva\obj\Debug\net5.0\PerceptronChuva.genruntimeconfig.cache
