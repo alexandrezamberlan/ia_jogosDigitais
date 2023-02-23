@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp_Busca
 {
-    internal class Grafo
+    public class Grafo
     {
         public int QuantidadeVertices { get; set; }
         public int QuantidadeArestas { get; set; }
