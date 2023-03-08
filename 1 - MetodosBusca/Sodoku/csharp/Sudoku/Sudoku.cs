@@ -138,7 +138,7 @@ namespace Sudoku
                 {
                     if (this.Matriz[linha,coluna] == 0)
                     {
-                        for (int tentandoNumero = 0; tentandoNumero <= this.Dimensao; tentandoNumero++)
+                        for (int tentandoNumero = 1; tentandoNumero <= this.Dimensao; tentandoNumero++)
                         {
                             if (numeroEstaNoLugarCerto(tentandoNumero, linha, coluna))
                             {
