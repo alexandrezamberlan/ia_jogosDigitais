@@ -8,8 +8,8 @@ namespace ConsoleApp_Busca
 {
     public class Grafo
     {
-        public int QuantidadeVertices { get; set; }
-        public int QuantidadeArestas { get; set; }
+        public int QuantidadeVertices { get; set; } //nodos ou nos do grafo
+        public int QuantidadeArestas { get; set; }  //arcos ou linhas do grafo
         public int[,] MatrizAdjacencia { get; set; }
 
         public Grafo(int quantidadeVertices)

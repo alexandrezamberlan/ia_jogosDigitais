@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\laboratorio\\source\\repos\\ConsoleApp_Busca\\ConsoleApp_Busca.csproj": {}
+    "C:\\Users\\laboratorio\\ia_jogosDigitais\\1 - MetodosBusca\\ConsoleApp_Busca\\ConsoleApp_Busca.csproj": {}
   },
   "projects": {
-    "C:\\Users\\laboratorio\\source\\repos\\ConsoleApp_Busca\\ConsoleApp_Busca.csproj": {
+    "C:\\Users\\laboratorio\\ia_jogosDigitais\\1 - MetodosBusca\\ConsoleApp_Busca\\ConsoleApp_Busca.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\laboratorio\\source\\repos\\ConsoleApp_Busca\\ConsoleApp_Busca.csproj",
+        "projectUniqueName": "C:\\Users\\laboratorio\\ia_jogosDigitais\\1 - MetodosBusca\\ConsoleApp_Busca\\ConsoleApp_Busca.csproj",
         "projectName": "ConsoleApp_Busca",
-        "projectPath": "C:\\Users\\laboratorio\\source\\repos\\ConsoleApp_Busca\\ConsoleApp_Busca.csproj",
+        "projectPath": "C:\\Users\\laboratorio\\ia_jogosDigitais\\1 - MetodosBusca\\ConsoleApp_Busca\\ConsoleApp_Busca.csproj",
         "packagesPath": "C:\\Users\\laboratorio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\laboratorio\\source\\repos\\ConsoleApp_Busca\\obj\\",
+        "outputPath": "C:\\Users\\laboratorio\\ia_jogosDigitais\\1 - MetodosBusca\\ConsoleApp_Busca\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
