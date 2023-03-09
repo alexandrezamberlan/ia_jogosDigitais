@@ -54,5 +54,16 @@ namespace ConsoleApp_Busca
                 QuantidadeArestas++;
             }
         }
+
+        public void inserirSimetrico(int origem, int destino, int custo)
+        {
+            if (MatrizAdjacencia[origem, destino] == 0)
+            {
+                MatrizAdjacencia[origem, destino] = custo;
+                MatrizAdjacencia[destino, origem] = custo;
+
+                QuantidadeArestas+=2;
+            }
+        }
     }
 }

@@ -42,7 +42,13 @@ namespace ConsoleApp_Busca
             return 0;
         }
 
-
+        /// <summary>
+        /// metodo de busca por forca bruta do tipo profundidade
+        /// </summary>
+        /// <param name="origem">vertice de partida no mapa</param>
+        /// <param name="destino">vertice objetivo no mapa</param>
+        /// <param name="grafo">matriz que representa um mapa</param>
+        /// <param name="cidades">lista das cidades com seus respectivos nomes</param>
         public static void mostraCaminhoProfundidade(int origem, int destino, Grafo grafo, List<string> cidades)
         {
             //aloco e inicializo vetor de visitados
