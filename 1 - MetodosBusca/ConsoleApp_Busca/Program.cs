@@ -34,16 +34,21 @@ exemplo1.inserirSimetrico(cidades.IndexOf("e"), cidades.IndexOf("g"), 1);
 
 
 exemplo1.exibirGrafo(cidades);
+try
+{
+	Console.Write("Nome da cidade de origem: ");
+	string origem = Console.ReadLine();
+	Console.Write("Nome da cidade de destino: ");
+	string destino = Console.ReadLine();
+	Console.WriteLine("\nBusca amplitude");
+	Busca.mostraCaminhoAmplitude(cidades.IndexOf(origem), cidades.IndexOf(destino), exemplo1, cidades);
 
-Console.Write("Nome da cidade de origem: ");
-string origem = Console.ReadLine();
-Console.Write("Nome da cidade de destino: ");
-string destino = Console.ReadLine();
-
-Console.WriteLine("\nBusca amplitude");
-Busca.mostraCaminhoAmplitude(cidades.IndexOf(origem), cidades.IndexOf(destino), exemplo1, cidades);
-
-Console.WriteLine("\nBusca profundidade");
-Busca.mostraCaminhoProfundidade(cidades.IndexOf(origem), cidades.IndexOf(destino), exemplo1, cidades);
+	Console.WriteLine("\nBusca profundidade");
+	Busca.mostraCaminhoProfundidade(cidades.IndexOf(origem), cidades.IndexOf(destino), exemplo1, cidades);
+}
+catch (Exception)
+{
+	throw;
+}
 
 

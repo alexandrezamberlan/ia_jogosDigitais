@@ -23,23 +23,27 @@ namespace ConsoleApp_Busca
         /// <param name="grafo">matriz representando o mapa das cidades com suas distancias</param>
         /// <param name="cidades">lista das cidades com seus respectivos nomes</param>
         /// <returns>um valor inteiro representando se conseguiu ou nao um caminho - 1 significa que sim, 0 que nao</returns>
-        static int buscaProfundidade(int no, int destino, Grafo grafo, List<string> cidades)
+        static void buscaProfundidade(int no, int destino, Grafo grafo, List<string> cidades)
         {
             int i;
             //usar o vértice no - printf, if, cont
             System.Console.Write(cidades[no] + "\t");
-            
-            if (no == destino) return 1; //localizei um caminho
+
+            if (no == destino)
+            {
+                Console.WriteLine("CHEGUEIIIIIIIIIII");
+                return ; //localizei um caminho
+            }
 
             for (i = 0; i < grafo.QuantidadeVertices; i++)
             {
                 if (grafo.MatrizAdjacencia[no, i] != 0 && visitados[i] == 0)
                 {
                     visitados[i] = 1;
-                    return buscaProfundidade(i, destino, grafo, cidades); //chamada recursiva, ou seja é aqui que o nodo visitado é inserido na pilha
+                    buscaProfundidade(i, destino, grafo, cidades); //chamada recursiva, ou seja é aqui que o nodo visitado é inserido na pilha
                 }
             }
-            return 0;
+            Console.Write("por aqui, nao tem caminho.....preciso voltar...");
         }
 
         /// <summary>
