@@ -149,6 +149,7 @@ namespace Sudoku
                                 //entra agora a estratégia de força bruta - profundidade com uso de pilha recursiva
                                 if (resolveSudoku(qtdChamadas + 1)) //chamada recursiva, que representa a pilha do profundidade
                                 {
+                                    //this.exibirSudoku("Tentando......");
                                     return true;
                                 }
                                 else
