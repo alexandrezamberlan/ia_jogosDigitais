@@ -89,8 +89,8 @@ static class Program
     }
 
     static void reproduzir(List<Cromossomo> populacao,
-                                  List<Cromossomo> novaPopulacao,
-                                  int taxaReproducao, String estadoFinal)
+                            List<Cromossomo> novaPopulacao,
+                            int taxaReproducao, String estadoFinal)
     {
         //100             -  populacao.count
         //taxaReproducao  - qtdReproduzidos == qtdGeradosNovos
@@ -195,7 +195,7 @@ static class Program
             taxaReproducao = 100 - taxaSelecao;
         } while (taxaSelecao <= 10 || taxaSelecao > 90);
 
-        //taxaSelecao = 70;
+        //taxaSelecao = 30;
         //taxaReproducao = 100 - taxaSelecao;
 
         do {
