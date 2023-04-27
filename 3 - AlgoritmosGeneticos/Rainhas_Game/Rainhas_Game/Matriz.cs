@@ -113,7 +113,7 @@ namespace Rainhas_Game
             {
                 for (int j = 0; j < this.dimensaoMatriz; j++)
                 {
-                    Console.Write(matriz[i, j] + "\t");
+                    Console.Write(matriz[i, j] + " ");
                 }
                 Console.WriteLine();
             }
@@ -151,6 +151,108 @@ namespace Rainhas_Game
                     {
                         contarRainhas++;
                     }
+                }
+                if (contarRainhas > 1)
+                {
+                    this.qtdRestricoesFalhas += contarRainhas;
+                }
+            }
+
+            //analisar as diagonais principais
+            // percorre as diagonais acima da diagonal principal
+            for (int i = 1; i < this.dimensaoMatriz; i++)
+            {
+                contarRainhas = 0;
+                int row = 1;
+                int col = i + 1;
+                
+                while (row < this.dimensaoMatriz && col < this.dimensaoMatriz)
+                {
+                    if (this.matriz[row, col] == 1)
+                    {
+                        contarRainhas++;
+                    }
+                    row++;
+                    col++;
+                }
+                if (contarRainhas > 1)
+                {
+                    this.qtdRestricoesFalhas += contarRainhas;
+                }
+            }
+
+            // percorre a diagonal principal
+            contarRainhas = 0;
+            for (int i = 0; i < this.dimensaoMatriz; i++)
+            {
+                if (this.matriz[i, i] == 1)
+                {
+                    contarRainhas++;
+                }
+            }
+            if (contarRainhas > 1)
+            {
+                this.qtdRestricoesFalhas += contarRainhas;
+            }
+
+            // percorre as diagonais abaixo da diagonal principal
+            for (int i = 1; i < this.dimensaoMatriz; i++)
+            {
+                contarRainhas = 0;
+                int row = i + 1;
+                int col = 1;
+                while (row < this.dimensaoMatriz && col < this.dimensaoMatriz)
+                {
+                    if (this.matriz[row, col] == 1)
+                    {
+                        contarRainhas++;
+                    }
+                    row++;
+                    col++;
+                }
+                if (contarRainhas > 1)
+                {
+                    this.qtdRestricoesFalhas += contarRainhas;
+                }
+            }
+
+
+            //analisar as diagonais secundarias
+            // analisa as diagonais da primeira linha
+            for (int i = 0; i < this.dimensaoMatriz; i++)
+            {
+                contarRainhas = 0;
+                int row = 0;
+                int col = i;
+                while (row < this.dimensaoMatriz && col >= 0)
+                {
+                    if (this.matriz[row, col] == 1)
+                    {
+                        contarRainhas++;
+                    }
+                    row++;
+                    col--;
+                }
+                if (contarRainhas > 1)
+                {
+                    this.qtdRestricoesFalhas += contarRainhas;
+                }
+            }
+
+            // analisa as diagonais da ultima coluna (exceto a diagonal principal)
+            for (int i = 1; i < this.dimensaoMatriz; i++)
+            {
+                contarRainhas = 0;
+                int row = i;
+                int col = this.dimensaoMatriz - 1;
+                while (row < this.dimensaoMatriz && col >= 0)
+                {
+                    if (this.matriz[row, col] == 1)
+                    {
+                        contarRainhas++;
+                    }
+                    row++;
+                    col--;
                 }
                 if (contarRainhas > 1)
                 {

@@ -13,3 +13,18 @@ C:\Users\laboratorio\source\repos\Rainhas_Game\Rainhas_Game\obj\Debug\net6.0\ref
 C:\Users\laboratorio\source\repos\Rainhas_Game\Rainhas_Game\obj\Debug\net6.0\Rainhas_Game.pdb
 C:\Users\laboratorio\source\repos\Rainhas_Game\Rainhas_Game\obj\Debug\net6.0\Rainhas_Game.genruntimeconfig.cache
 C:\Users\laboratorio\source\repos\Rainhas_Game\Rainhas_Game\obj\Debug\net6.0\ref\Rainhas_Game.dll
+C:\Users\laboratorio\ia_jogosDigitais\3 - AlgoritmosGeneticos\Rainhas_Game\Rainhas_Game\bin\Debug\net6.0\Rainhas_Game.exe
+C:\Users\laboratorio\ia_jogosDigitais\3 - AlgoritmosGeneticos\Rainhas_Game\Rainhas_Game\bin\Debug\net6.0\Rainhas_Game.deps.json
+C:\Users\laboratorio\ia_jogosDigitais\3 - AlgoritmosGeneticos\Rainhas_Game\Rainhas_Game\bin\Debug\net6.0\Rainhas_Game.runtimeconfig.json
+C:\Users\laboratorio\ia_jogosDigitais\3 - AlgoritmosGeneticos\Rainhas_Game\Rainhas_Game\bin\Debug\net6.0\Rainhas_Game.dll
+C:\Users\laboratorio\ia_jogosDigitais\3 - AlgoritmosGeneticos\Rainhas_Game\Rainhas_Game\bin\Debug\net6.0\Rainhas_Game.pdb
+C:\Users\laboratorio\ia_jogosDigitais\3 - AlgoritmosGeneticos\Rainhas_Game\Rainhas_Game\obj\Debug\net6.0\Rainhas_Game.csproj.AssemblyReference.cache
+C:\Users\laboratorio\ia_jogosDigitais\3 - AlgoritmosGeneticos\Rainhas_Game\Rainhas_Game\obj\Debug\net6.0\Rainhas_Game.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\laboratorio\ia_jogosDigitais\3 - AlgoritmosGeneticos\Rainhas_Game\Rainhas_Game\obj\Debug\net6.0\Rainhas_Game.AssemblyInfoInputs.cache
+C:\Users\laboratorio\ia_jogosDigitais\3 - AlgoritmosGeneticos\Rainhas_Game\Rainhas_Game\obj\Debug\net6.0\Rainhas_Game.AssemblyInfo.cs
+C:\Users\laboratorio\ia_jogosDigitais\3 - AlgoritmosGeneticos\Rainhas_Game\Rainhas_Game\obj\Debug\net6.0\Rainhas_Game.csproj.CoreCompileInputs.cache
+C:\Users\laboratorio\ia_jogosDigitais\3 - AlgoritmosGeneticos\Rainhas_Game\Rainhas_Game\obj\Debug\net6.0\Rainhas_Game.dll
+C:\Users\laboratorio\ia_jogosDigitais\3 - AlgoritmosGeneticos\Rainhas_Game\Rainhas_Game\obj\Debug\net6.0\refint\Rainhas_Game.dll
+C:\Users\laboratorio\ia_jogosDigitais\3 - AlgoritmosGeneticos\Rainhas_Game\Rainhas_Game\obj\Debug\net6.0\Rainhas_Game.pdb
+C:\Users\laboratorio\ia_jogosDigitais\3 - AlgoritmosGeneticos\Rainhas_Game\Rainhas_Game\obj\Debug\net6.0\Rainhas_Game.genruntimeconfig.cache
+C:\Users\laboratorio\ia_jogosDigitais\3 - AlgoritmosGeneticos\Rainhas_Game\Rainhas_Game\obj\Debug\net6.0\ref\Rainhas_Game.dll

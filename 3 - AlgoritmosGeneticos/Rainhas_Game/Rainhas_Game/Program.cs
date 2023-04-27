@@ -1,11 +1,12 @@
 ﻿using Rainhas_Game;
 
 
-int tamanhoPopulacao = 100000;
-List<Matriz> listaTabuleiros = new List<Matriz>();  
+int tamanhoPopulacao = 10;
+int tamanhoMatriz = 4;
+List<Matriz> listaTabuleiros = new List<Matriz>();
 for (int i = 0; i < tamanhoPopulacao; i++)
 {
-    listaTabuleiros.Add( new Matriz(5) );
+    listaTabuleiros.Add(new Matriz(tamanhoMatriz));
     listaTabuleiros[i].preencherMatriz();
     listaTabuleiros[i].verificarRestricoes();
     listaTabuleiros[i].exibirMatriz("Tabuleiro...." + i);
@@ -18,4 +19,8 @@ for (int i = 0; i < tamanhoPopulacao; i++)
 
 }
 
+
+//MeusTestes matrizTeste = new MeusTestes(3);
+//matrizTeste.exibirMatriz();
+//matrizTeste.mostrarDiagonaisPrincipais();
 

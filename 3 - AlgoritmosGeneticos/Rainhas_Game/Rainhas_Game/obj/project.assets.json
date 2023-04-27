@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\laboratorio\\source\\repos\\Rainhas_Game\\Rainhas_Game\\Rainhas_Game.csproj",
+      "projectUniqueName": "C:\\Users\\laboratorio\\ia_jogosDigitais\\3 - AlgoritmosGeneticos\\Rainhas_Game\\Rainhas_Game\\Rainhas_Game.csproj",
       "projectName": "Rainhas_Game",
-      "projectPath": "C:\\Users\\laboratorio\\source\\repos\\Rainhas_Game\\Rainhas_Game\\Rainhas_Game.csproj",
+      "projectPath": "C:\\Users\\laboratorio\\ia_jogosDigitais\\3 - AlgoritmosGeneticos\\Rainhas_Game\\Rainhas_Game\\Rainhas_Game.csproj",
       "packagesPath": "C:\\Users\\laboratorio\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\laboratorio\\source\\repos\\Rainhas_Game\\Rainhas_Game\\obj\\",
+      "outputPath": "C:\\Users\\laboratorio\\ia_jogosDigitais\\3 - AlgoritmosGeneticos\\Rainhas_Game\\Rainhas_Game\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
