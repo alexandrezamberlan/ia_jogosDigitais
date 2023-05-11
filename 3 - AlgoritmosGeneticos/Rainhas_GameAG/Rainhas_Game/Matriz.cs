@@ -48,6 +48,28 @@ namespace Rainhas_Game
         }
 
         /// <summary>
+        /// construtor que recebe uma matriz, em geral um filho gerado no cruzamento, e calcula sua aptidao
+        /// </summary>
+        /// <param name="matriz"></param>
+        public Matriz(int[,] matriz)
+        {
+            this.dimensaoMatriz = matriz.GetLength(0);
+            this.matriz = new int[dimensaoMatriz, dimensaoMatriz];
+            this.qtdRestricoesFalhas = 0;
+
+            for (int lin = 0; lin < this.dimensaoMatriz; lin++)
+            {
+                for (int col = 0; col < this.dimensaoMatriz; col++)
+                {
+                    this.matriz[lin, col] = matriz[lin,col];
+                }                
+            }
+            this.verificarRestricoes();
+        }
+
+
+
+        /// <summary>
         /// método para embaralhar a lista temporária e de inteiros
         /// </summary>
         /// <param name="lista">lista de inteiros</param>
@@ -119,8 +141,11 @@ namespace Rainhas_Game
             }
         }
 
-
-        public bool qtdRainhasOK()
+        /// <summary>
+        /// método que verifica se a quantidade de rainhas está certo
+        /// </summary>
+        /// <returns>retorna o total de rainhas presentes na matriz</returns>
+        public int descobreQtdRainhas()
         {
             int contarRainhas = 0;
             for (int i = 0; i < this.dimensaoMatriz; i++)
@@ -133,20 +158,21 @@ namespace Rainhas_Game
                     }
                 }
             }
-
-            return contarRainhas == qtdRainhas;
+            return contarRainhas;
         }
 
         //método validarMatriz
         public void verificarRestricoes()
         {
-            int contarRainhas;
-            if (!qtdRainhasOK())
+            int totalRainhas = descobreQtdRainhas();
+            if (totalRainhas != this.dimensaoMatriz)
             {
-                this.qtdRestricoesFalhas = dimensaoMatriz * 50;
+                this.qtdRestricoesFalhas = dimensaoMatriz * dimensaoMatriz + totalRainhas;
                 return;
             }
-            
+
+
+            int contarRainhas;
             //analisar linhas
             for (int i = 0; i < this.dimensaoMatriz; i++)
             {
