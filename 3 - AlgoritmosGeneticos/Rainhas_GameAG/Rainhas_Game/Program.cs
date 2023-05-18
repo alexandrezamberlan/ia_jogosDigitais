@@ -5,14 +5,14 @@ List<Matriz> populacao = new List<Matriz>();
 List<Matriz> novaPopulacao = new List<Matriz>();
 
 //tamanhoPopulacao e tamanho do tabuleiro
-int tamanhoPopulacao = 10;
-int tamanhoMatriz = 4;
+int tamanhoPopulacao = 9000;
+int tamanhoMatriz = 8;
 //quantidadeGeracoes
-int qtdGeracoes = 400;
+int qtdGeracoes = 2000;
 //taxaSelecao / taxaReproducao
 int taxaSelecao = 30;
 int taxaReproducao = 100 - taxaSelecao;
-//taxaMutacao
+
 int taxaMutacao = 5;
 
 //inicializarPopulacao(populacao, tamanhoPopulacao)
@@ -22,16 +22,22 @@ AG.inicializarPopulacao(populacao, tamanhoPopulacao, tamanhoMatriz);
 AG.ordenarPopulacao(populacao);
 
 //exibir a primeira geracao
-AG.exibirPopulacao(populacao,"GERAÇÃO 1");
+//AG.exibirPopulacao(populacao,"GERAÇÃO 1");
 
 //gerar as proximas gerações
 for (int i = 2; i <= qtdGeracoes;i++)
 {
+   
     AG.selecionarPopulacaoPorTorneio(populacao, novaPopulacao, taxaSelecao);
     AG.reproduzirPopulacao(populacao, novaPopulacao, taxaReproducao);
-    //  AG.mutarPopulacao(novaPopulacao) //verificar a taxa ou a frequencia
+    //testar se vai haver mutacao
+    if (i % (populacao.Count / taxaMutacao) == 0)
+    {
+        AG.mutarPopulacao(novaPopulacao); //verificar a taxa ou a frequencia
+    }
     AG.ordenarPopulacao(novaPopulacao);
-    AG.exibirPopulacao(novaPopulacao, "GERAÇÃO " + i);
+    //AG.exibirPopulacao(novaPopulacao, "GERAÇÃO " + i);
+    Console.WriteLine("GERAÇÃO " + i);
     populacao.Clear();
     populacao.AddRange(novaPopulacao);
     novaPopulacao.Clear();

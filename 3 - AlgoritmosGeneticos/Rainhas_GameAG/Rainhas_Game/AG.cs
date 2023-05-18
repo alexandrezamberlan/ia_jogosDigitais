@@ -72,25 +72,31 @@ namespace Rainhas_Game
             //taxaSelecao  - qtdSelecionados
             int qtdSelecionados = (taxaSelecao * populacao.Count) / 100;
             // Console.WriteLine("Quantidade de selecionados: " + qtdSelecionados);
-
+           
             Matriz c1, c2, c3;
             Random gerador = new Random();
             List<Matriz> torneio = new List<Matriz>();
             Matriz selecionada;
 
             int i = 0;
+            int posicao;
             do
             {
                 c1 = populacao[gerador.Next(populacao.Count)];
 
                 do
                 {
-                    c2 = populacao[gerador.Next(populacao.Count)];
+                    posicao = gerador.Next(populacao.Count);
+                    c2 = populacao[posicao];
+                    //Console.WriteLine("preso na escolha do c2 " + posicao);
+                    
                 } while (AG.saoIguais(c1, c2));
 
                 do
                 {
-                    c3 = populacao[gerador.Next(populacao.Count)];
+                    posicao = gerador.Next(populacao.Count);
+                    c3 = populacao[posicao];
+                    //Console.WriteLine("preso na escolha do c3 " + posicao);
                 } while (AG.saoIguais(c3, c1) || AG.saoIguais(c3, c2));
 
                 torneio.Add(c1);
@@ -179,32 +185,93 @@ namespace Rainhas_Game
                     }
                 }
 
+                filho1 = new Matriz(mFilho1);
+                filho2 = new Matriz(mFilho2);
+                novaPopulacao.Add(filho1);
+                novaPopulacao.Add(filho2);
 
-                //Console.WriteLine("Filho1");
-                //for (int lin = 0; lin < pai.dimensaoMatriz; lin++)
-                //{
-                //    for (int col = 0; col < pai.dimensaoMatriz; col++)
-                //    {
-                //        Console.Write(mFilho1[lin, col] + " ");
-                //    }
-                //    Console.WriteLine();
-                //}
-                //Console.WriteLine("Filho2");
-                //for (int lin = 0; lin < pai.dimensaoMatriz; lin++)
-                //{
-                //    for (int col = 0; col < pai.dimensaoMatriz; col++)
-                //    {
-                //        Console.Write(mFilho2[lin, col] + " ");
-                //    }
-                //    Console.WriteLine();
-                //}
+                if (filho1.ehMeta())
+                {
+                    filho1.exibirMatriz("FILHO 1 EH META");                    
+                    Console.ReadKey();
+                    Environment.Exit(0);
+                }
 
-                novaPopulacao.Add(new Matriz(mFilho1));
-                novaPopulacao.Add(new Matriz(mFilho2));
+                if (filho2.ehMeta())
+                {
+                    filho2.exibirMatriz("FILHO 2 EH META");
+                    Console.ReadKey();
+                    Environment.Exit(0);
+                }
+
 
                 i = i + 2;
             } while (i < qtdReproduzidos);
 
+            //podar o final que sobra da novaPopulacao
+            while (populacao.Count < novaPopulacao.Count)
+            {
+                //podar o fim da novaPopulacao
+                novaPopulacao.RemoveAt(novaPopulacao.Count - 1);
+            }
+
         }
+
+        public static void clonar (int[,] origem, int[,] destino)
+        {
+            for (int lin = 0; lin < origem.GetLength(0); lin++)
+            {
+                for (int col = 0; col < origem.GetLength(0); col++)
+                {
+                    destino[lin, col] = origem[lin, col];
+                }
+            }
+
+        }
+
+        public static void mutarPopulacao(List<Matriz> populacao)
+        {
+            Random gerador = new Random();
+            int qtdMutantes = gerador.Next(populacao.Count / 5) + 1;
+            Matriz mutante;
+            int posicaoMutante;
+            int linSorteada;
+            int colSorteada;
+
+            int[,] matrizTemporaria;
+
+            for (; qtdMutantes > 0; qtdMutantes--)
+            {
+                posicaoMutante = gerador.Next(populacao.Count);
+                mutante = populacao[posicaoMutante];
+                matrizTemporaria = new int[mutante.dimensaoMatriz, mutante.dimensaoMatriz];
+
+                clonar(mutante.matriz, matrizTemporaria);
+
+                linSorteada = gerador.Next(mutante.dimensaoMatriz);
+                colSorteada = gerador.Next(mutante.dimensaoMatriz);
+
+                if (matrizTemporaria[linSorteada, colSorteada] == 1)
+                {
+                    matrizTemporaria[linSorteada, colSorteada] = 0;
+                } else
+                {
+                    matrizTemporaria[linSorteada, colSorteada] = 1;
+                }
+                                
+                mutante = new Matriz(matrizTemporaria);
+
+                //recalculando sua aptidao
+                populacao[posicaoMutante] = mutante;
+
+                if (mutante.ehMeta())
+                {
+                    mutante.exibirMatriz("DEUUUUUUU");
+                    Console.ReadKey();
+                    Environment.Exit(0);
+                }
+            }
+        }
+
     }
 }
