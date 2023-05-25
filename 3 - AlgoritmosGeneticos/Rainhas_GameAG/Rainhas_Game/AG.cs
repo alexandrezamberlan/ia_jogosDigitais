@@ -7,8 +7,17 @@ using System.Threading.Tasks;
 
 namespace Rainhas_Game
 {
+    /// <summary>
+    /// classe contendo os principais métodos de um Algoritmo Genético
+    /// </summary>
     internal class AG
     {
+        /// <summary>
+        /// método de classe que inicializa uma (lista) populacao com uma quantidade e com matriz de tamanho vindo em argumento
+        /// </summary>
+        /// <param name="populacao"></param>
+        /// <param name="tamanhoPopulacao"></param>
+        /// <param name="tamanhoMatriz"></param>
         public static void inicializarPopulacao(List<Matriz> populacao, int tamanhoPopulacao, int tamanhoMatriz)
         {
             for (int i = 0; i < tamanhoPopulacao; i++)
@@ -24,6 +33,10 @@ namespace Rainhas_Game
             }
         }
 
+        /// <summary>
+        /// método de classe que ordena uma população de Matriz tendo como referência a quantidade de restrições, ordenando de forma crescente
+        /// </summary>
+        /// <param name="populacao"></param>
         public static void ordenarPopulacao(List<Matriz> populacao)
         {
             List<Matriz> populacaoOrdenada = populacao.OrderBy(x => x.qtdRestricoesFalhas).ToList();            
@@ -31,6 +44,12 @@ namespace Rainhas_Game
             populacao.AddRange(populacaoOrdenada);
         }
 
+
+        /// <summary>
+        /// método que exibe as matrizes inseridas na população
+        /// </summary>
+        /// <param name="populacao"></param>
+        /// <param name="frase"></param>
         public static void exibirPopulacao(List<Matriz> populacao, string frase)
         {
             Console.WriteLine(frase);
@@ -40,6 +59,13 @@ namespace Rainhas_Game
             }
         }
 
+
+        /// <summary>
+        /// método de classe que analisa se 2 matrizes são iguais, ou seja, têm os mesmos conteúdos
+        /// </summary>
+        /// <param name="individuo1"></param>
+        /// <param name="individuo2"></param>
+        /// <returns></returns>
         public static bool saoIguais(Matriz individuo1, Matriz individuo2)
         {
             for (int i = 0; i < individuo1.dimensaoMatriz; i++)
@@ -54,6 +80,14 @@ namespace Rainhas_Game
             }
             return true;
         }
+
+
+        /// <summary>
+        /// método de classe que recebe uma matriz e verifica se ela está ou não contida na lista população
+        /// </summary>
+        /// <param name="populacao"></param>
+        /// <param name="selecionada"></param>
+        /// <returns></returns>
         public static bool contem(List<Matriz> populacao, Matriz selecionada)
         {
             for (int i = 0; i < populacao.Count; i++)
@@ -66,6 +100,13 @@ namespace Rainhas_Game
             return false;
         }
 
+
+        /// <summary>
+        /// método de classe que representa a rotina de seleção de um Algoritmo Genético, neste caso o algoritmo de seleção por TORNEIO
+        /// </summary>
+        /// <param name="populacao"></param>
+        /// <param name="novaPopulacao"></param>
+        /// <param name="taxaSelecao"></param>
         public static void selecionarPopulacaoPorTorneio(List<Matriz> populacao, List<Matriz> novaPopulacao, int taxaSelecao)
         {
             //100          -  populacao.count
@@ -83,7 +124,6 @@ namespace Rainhas_Game
             do
             {
                 c1 = populacao[gerador.Next(populacao.Count)];
-
                 do
                 {
                     posicao = gerador.Next(populacao.Count);
@@ -122,6 +162,13 @@ namespace Rainhas_Game
             }
         }
 
+
+        /// <summary>
+        /// método de classe que representa a rotina de reprodução ou cruzamento de um Algoritmo Genético. A cada cruzamento de 2 indivíduos ou matrizes, 2 filhos são gerados
+        /// </summary>
+        /// <param name="populacao"></param>
+        /// <param name="novaPopulacao"></param>
+        /// <param name="taxaReproducao"></param>
         public static void reproduzirPopulacao(List<Matriz> populacao, List<Matriz> novaPopulacao, int taxaReproducao)
         {
             //100             -  populacao.count
@@ -139,7 +186,6 @@ namespace Rainhas_Game
             do
             {
                 pai = populacao[gerador.Next((int)populacao.Count / 3)];
-
                 do
                 {
                     mae = populacao[gerador.Next(populacao.Count)];
@@ -194,17 +240,15 @@ namespace Rainhas_Game
                 {
                     filho1.exibirMatriz("FILHO 1 EH META");                    
                     Console.ReadKey();
-                    Environment.Exit(0);
+                    
                 }
 
                 if (filho2.ehMeta())
                 {
                     filho2.exibirMatriz("FILHO 2 EH META");
                     Console.ReadKey();
-                    Environment.Exit(0);
+                    
                 }
-
-
                 i = i + 2;
             } while (i < qtdReproduzidos);
 
@@ -214,9 +258,13 @@ namespace Rainhas_Game
                 //podar o fim da novaPopulacao
                 novaPopulacao.RemoveAt(novaPopulacao.Count - 1);
             }
-
         }
 
+        /// <summary>
+        /// método de classe para clonar matriz de inteiros
+        /// </summary>
+        /// <param name="origem"></param>
+        /// <param name="destino"></param>
         public static void clonar (int[,] origem, int[,] destino)
         {
             for (int lin = 0; lin < origem.GetLength(0); lin++)
@@ -229,6 +277,10 @@ namespace Rainhas_Game
 
         }
 
+        /// <summary>
+        /// método de classe que representa a rotina de mutação de um Algoritmo Genético
+        /// </summary>
+        /// <param name="populacao"></param>
         public static void mutarPopulacao(List<Matriz> populacao)
         {
             Random gerador = new Random();
@@ -268,7 +320,6 @@ namespace Rainhas_Game
                 {
                     mutante.exibirMatriz("DEUUUUUUU");
                     Console.ReadKey();
-                    Environment.Exit(0);
                 }
             }
         }

@@ -8,7 +8,7 @@ List<Matriz> novaPopulacao = new List<Matriz>();
 int tamanhoPopulacao = 9000;
 int tamanhoMatriz = 8;
 //quantidadeGeracoes
-int qtdGeracoes = 2000;
+int qtdGeracoes = 9000;
 //taxaSelecao / taxaReproducao
 int taxaSelecao = 30;
 int taxaReproducao = 100 - taxaSelecao;

@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace Rainhas_Game
 {
+    /// <summary>
+    /// classe que contém a estrutura de dados matriz quadrada de inteiros, representando o tabuleiro
+    /// </summary>
     internal class Matriz
     {
         /// <summary>
@@ -37,7 +40,6 @@ namespace Rainhas_Game
             this.matriz = new int[dimensao, dimensao];
             this.qtdRestricoesFalhas = 0;
            
-
             for(int i = 0; i < this.dimensaoMatriz; i++)
             {
                 for(int j = 0; j < this.dimensaoMatriz; j++)
@@ -66,7 +68,6 @@ namespace Rainhas_Game
             }
             this.verificarRestricoes();
         }
-
 
 
         /// <summary>
@@ -161,7 +162,11 @@ namespace Rainhas_Game
             return contarRainhas;
         }
 
-        //método validarMatriz
+        /// <summary>
+        /// método que analisa linhas, colunas e diagonais a procura de mais de uma rainha nessa orientação. Caso encontre mais de uma rainha, adiciona restrições por
+        /// rainhas na mesma linha, coluna, diagonal (principal e secundária)
+        /// Em um Algoritmo Genético, o cálculo da aptidão ou do fitness.
+        /// </summary>
         public void verificarRestricoes()
         {
             int totalRainhas = descobreQtdRainhas();
@@ -170,7 +175,6 @@ namespace Rainhas_Game
                 this.qtdRestricoesFalhas = dimensaoMatriz * dimensaoMatriz + totalRainhas;
                 return;
             }
-
 
             int contarRainhas;
             //analisar linhas
@@ -207,12 +211,27 @@ namespace Rainhas_Game
                 }
             }
 
+            // percorre a diagonal principal
+            contarRainhas = 0;
+            for (int i = 0; i < this.dimensaoMatriz; i++)
+            {
+                if (this.matriz[i, i] == 1)
+                {
+                    contarRainhas++;
+                }
+            }
+            if (contarRainhas > 1)
+            {
+                this.qtdRestricoesFalhas += contarRainhas;
+            }
+
+
             //analisar as diagonais principais
             // percorre as diagonais acima da diagonal principal
-            for (int i = 1; i < this.dimensaoMatriz; i++)
+            for (int i = 0; i < this.dimensaoMatriz; i++)
             {
                 contarRainhas = 0;
-                int row = 1;
+                int row = 0;
                 int col = i + 1;
                 
                 while (row < this.dimensaoMatriz && col < this.dimensaoMatriz)
@@ -228,28 +247,14 @@ namespace Rainhas_Game
                 {
                     this.qtdRestricoesFalhas += contarRainhas;
                 }
-            }
-
-            // percorre a diagonal principal
-            contarRainhas = 0;
-            for (int i = 0; i < this.dimensaoMatriz; i++)
-            {
-                if (this.matriz[i, i] == 1)
-                {
-                    contarRainhas++;
-                }
-            }
-            if (contarRainhas > 1)
-            {
-                this.qtdRestricoesFalhas += contarRainhas;
-            }
+            }          
 
             // percorre as diagonais abaixo da diagonal principal
-            for (int i = 1; i < this.dimensaoMatriz; i++)
+            for (int i = 0; i < this.dimensaoMatriz; i++)
             {
                 contarRainhas = 0;
                 int row = i + 1;
-                int col = 1;
+                int col = 0;
                 while (row < this.dimensaoMatriz && col < this.dimensaoMatriz)
                 {
                     if (this.matriz[row, col] == 1)
@@ -265,9 +270,8 @@ namespace Rainhas_Game
                 }
             }
 
-
             //analisar as diagonais secundarias
-            // analisa as diagonais da primeira linha
+            // analisa as diagonais acima da diagonal secundária
             for (int i = 0; i < this.dimensaoMatriz; i++)
             {
                 contarRainhas = 0;
@@ -288,7 +292,7 @@ namespace Rainhas_Game
                 }
             }
 
-            // analisa as diagonais da ultima coluna (exceto a diagonal principal)
+            // analisa as diagonais abaixo da diagonal secundária
             for (int i = 1; i < this.dimensaoMatriz; i++)
             {
                 contarRainhas = 0;
@@ -310,6 +314,11 @@ namespace Rainhas_Game
             }
         }
 
+        
+        /// <summary>
+        /// método que interrompe o Algoritmo Genético quando uma solução é encontrada, ou seja, quando a matriz não tem nenhuma restrição ferida.
+        /// </summary>
+        /// <returns></returns>
         public bool ehMeta()
         {
             return this.qtdRestricoesFalhas == 0;
